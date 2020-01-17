@@ -39,6 +39,7 @@ Before creating an app, you must have access to the Veeva Vault target resource 
 Design Center or Anypoint Studio.
 
 To use this connector, you need:
+
 * A AnyPoint Platform Account.
 * A Veeva Vault account.
 
