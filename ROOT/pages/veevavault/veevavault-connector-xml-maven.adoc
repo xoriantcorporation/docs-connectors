@@ -25,7 +25,7 @@ This example shows how the namespace statements are placed in the XML:
 
 [source,xml,linenums]
 ----
-echo '<mule xmlns:veevavault="http://www.mulesoft.org/schema/mule/veevavault"
+<mule xmlns:veevavault="http://www.mulesoft.org/schema/mule/veevavault"
 xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
 xmlns:http="http://www.mulesoft.org/schema/mule/http"
 xmlns:file="http://www.mulesoft.org/schema/mule/file"
