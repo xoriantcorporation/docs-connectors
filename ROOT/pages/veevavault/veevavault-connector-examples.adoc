@@ -30,9 +30,9 @@ To create Mule flow, follow these instructions:
 
 == Studio Flows
 
-image:assets/images/veevavault/veevavault-connector-create-documents-example.png[image,width=601,height=204]
+image:../../assets/images/veevavault/veevavault-connector-create-documents-example.png[image,width=601,height=204]
 
-image:assets/images/veevavault/veevavault-connector-upload-documents-example.png[image,width=578,height=135]
+image:../../assets/images/veevavault/veevavault-connector-upload-documents-example.png[image,width=578,height=135]
 
 == XML Code
 
@@ -118,7 +118,7 @@ To create Mule flow, follow these instructions:
 * Drag Set Payload element after For-Each to set payload that can be returned to triggered source.
 * Drag Logger element to log information in console or log file.
 
-image:assets/images/veevavault/veevavault-connector-get-documents-example.png[image,width=598,height=245]
+image:../../assets/images/veevavault/veevavault-connector-get-documents-example.png[image,width=598,height=245]
 
 == XML Code
 
@@ -194,7 +194,7 @@ To create Mule flow, follow these instructions:
 * Drag Set Payload element after For-Each to set payload that can be returned to triggered source.
 * Drag Logger element to log information in console or log file.
 
-image:assets/images/veevavault/veevavault-connector-query-example.png[image,width=601,height=252]
+image:../../assets/images/veevavault/veevavault-connector-query-example.png[image,width=601,height=252]
 
 == XML Code
 

@@ -21,7 +21,7 @@ Before installing Studio
 . Click *Browse* to locate the folder where you installed Maven.
 . Click *Test Maven Configuration*. When the green checkmark is shown, click *OK*.
 +
-image:assets/images/veevavault/veevavault-connector-maven-test.png[image,width=531,height=386]
+image:../../assets/images/veevavault/veevavault-connector-maven-test.png[image,width=531,height=386]
 
 To configure a connector in Anypoint Studio:
 
@@ -66,7 +66,7 @@ To configure this connector:
 . Click *OK*
 . In the *Veeva Vault Config* window, General tab.
 
-image:assets/images/veevavault/veevavault-connector-basic-authentication-general.png[image,width=615,height=621]
+image:../../assets/images/veevavault/veevavault-connector-basic-authentication-general.png[image,width=615,height=621]
 
 [cols=",",options="header",]
 |===
@@ -95,7 +95,7 @@ The Connection Configuration will do Basic Authentication which will accept requ
 
 . In the *Veeva Vault Config* window, Advanced tab.
 
-image:assets/images/veevavault/veevavault-connector-basic-authentication-advanced.png[image,width=614,height=622]
+image:../../assets/images/veevavault/veevavault-connector-basic-authentication-advanced.png[image,width=614,height=622]
 
 *Burst API Limit Exceed Profile:*
 
