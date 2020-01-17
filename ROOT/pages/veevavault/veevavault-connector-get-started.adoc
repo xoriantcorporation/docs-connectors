@@ -40,14 +40,14 @@ Design Center or Anypoint Studio.
 
 To use this connector, you need:
 
-* A AnyPoint Platform Account.
-* A Veeva Vault account.
+* AnyPoint Platform Account.
+* Veeva Vault account.
 
 == Audience
 
-* Starting user -- To create your Mule app, see xref:veevavault/veevavault-connector-design-center.adoc[Design Center Configuration] or xref:veevavault/veevavault-connector-studio.adoc[Studio Configuration]. The xref:veevavault/veevavault-connector-config-topics.adoc[Additional Configuration Information]
-topic helps extend your understanding of the Veeva Vault connector. The xref:veevavault/veevavault-connector-examples.adoc[Examples] topic provides one or more use cases for using the connector.
-* Power user - Read the xref:veevavault/veevavault-connector-xml-maven.adoc[XML and Maven Support], xref:veevavault/veevavault-connector-config-topics.adoc[Additional Configuration Information], and xref:veevavault/veevavault-connector-examples.adoc[Examples] topics.
+* Starting user -- To create your Mule app, see xref:./veevavault-connector-design-center.adoc[Design Center Configuration] or xref:./veevavault-connector-studio.adoc[Studio Configuration]. The xref:./veevavault-connector-config-topics.adoc[Additional Configuration Information]
+topic helps extend your understanding of the Veeva Vault connector. The xref:./veevavault-connector-examples.adoc[Examples] topic provides one or more use cases for using the connector.
+* Power user - Read the xref:./veevavault-connector-xml-maven.adoc[XML and Maven Support], xref:./veevavault-connector-config-topics.adoc[Additional Configuration Information], and xref:./veevavault-connector-examples.adoc[Examples] topics.
 
 == Learn Using Exchange Templates and Examples
 
@@ -59,7 +59,7 @@ https://www.mulesoft.com/exchange/[Anypoint Exchange] provides templates you can
 
 == Next Step
 
-After you have met the prerequisites and experimented with templates and examples, you are ready to create an app with xref:veevavault/veevavault-connector-design-center.adoc[Design Center] or xref:veevavault/veevavault-connector-studio.adoc[Anypoint Studio].
+After you have met the prerequisites and experimented with templates and examples, you are ready to create an app with xref:./veevavault-connector-design-center.adoc[Design Center] or xref:./veevavault-connector-studio.adoc[Anypoint Studio].
 
 == See Also
 
