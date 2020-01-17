@@ -38,7 +38,7 @@ Anypoint Studio provides two ways to add the connector to your Studio project: f
 . In Studio, create a Mule project.
 . Click the Exchange icon *(X)* in the upper-left of the Studio task bar.
 . In Exchange, click *Login* and supply your Anypoint Platform username and password.
-. In Exchange, search for "Veeva Vault".
+. In Exchange, search for "*Veeva Vault*".
 . Select the Veeva Vault connector and click *Add to project*.
 . Follow the prompts to install the connector.
 
@@ -46,7 +46,7 @@ Anypoint Studio provides two ways to add the connector to your Studio project: f
 
 . In Studio, create a Mule project.
 . In the Mule Palette view, click *(X) Search in Exchange*.
-. In *Add Modules to Project*, type "Veeva Vault" in the search field.
+. In *Add Modules to Project*, type "*Veeva Vault*" in the search field.
 . Click the Veeva Vault connector name in *Available modules*.
 . Click *Add*.
 . Click *Finish*.
@@ -170,7 +170,7 @@ The maximum time in milliseconds that the connector will wait for the Veeva Vaul
 
 == Next Step
 
-After configuring the Veeva Vault Connector for use in Studio, see the xref:veevavault/veevavault-connector-config-topics.adoc[Additional Configuration Information] 
+After configuring the Veeva Vault Connector for use in Studio, see the xref:./veevavault-connector-config-topics.adoc[Additional Configuration Information] 
 topic for more configuration steps.
 
 == See Also
