@@ -352,7 +352,7 @@ JSON
 |Object Metadata |Input Stream a|
 The object metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:../../assets/images/veevavault/image7.png[image,width=300,height=50]
+image:../../assets/images/veevavault/veevavault-connector-delete-object-records-input.png[image,width=300,height=70]
 
 | |X
 |===
