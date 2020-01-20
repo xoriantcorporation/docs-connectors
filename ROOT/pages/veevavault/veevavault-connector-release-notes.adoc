@@ -12,7 +12,7 @@ Reference: xref:./veevavault-connector-reference.adoc[VeevaVault Connector Refer
 
 *Version 1.1.0*
 
-*January 2020*
+*Release:* January 2020
 
 *Compatibility*
 
@@ -34,7 +34,7 @@ The Veeva Vault Connector supports these software versions:
 
 *Version 1.0.3*
 
-*August 2019*
+*Release:* August 2019
 
 This is initial release
 
