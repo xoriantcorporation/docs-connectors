@@ -77,8 +77,8 @@ The Daily API Limit Profile to configure API limit threshold for evaluation with
 
 === Associated Operations
 
-* link:#create-document-renditions[*Create Document Renditions*]
 * link:#create-documents[*Create Documents*]
+* link:#create-document-renditions[*Create Document Renditions*]
 * link:#create-object-records[*Create Object Records*]
 * link:#delete-document-renditions[*Delete Document Renditions*]
 * link:#delete-documents[*Delete Documents*]
@@ -97,49 +97,6 @@ The Daily API Limit Profile to configure API limit threshold for evaluation with
 
 === Operations
 
-==== Create Document Renditions
-
-Create Document Renditions on vault with provided metadata in CSV/JSON format.
-
-*<veevavault:create-document-renditions>*
-
-*Parameters:*
-
-[cols=",,,,",options="header",]
-|===
-|*Name* |*Type* |*Description* |*Default Value* |*Required*
-|Metadata Format a|
-Enum (String)
-
-* CSV
-* JSON
-
-|Metadata format either CSV or JSON. | |X
-|Document Metadata |Input Stream a|
-The document metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
-
-image:media/tech-ref/image1.png[image,width=287,height=182]
-
-| |X
-|===
-
-*For Configurations:*
-
-link:#veevavault-connector-connection-config[Connection Configuration]
-
-*Throws:*
-
-* VEEVAVAULT:API_LIMIT_EXCEEDED
-* VEEVAVAULT:ATTRIBUTE_NOT_SUPPORTED
-* VEEVAVAULT:INACTIVE_USER
-* VEEVAVAULT:INVALID_DATA
-* VEEVAVAULT:INVALID_DOCUMENT
-* VEEVAVAULT:INSUFFICIENT_ACCESS
-* VEEVAVAULT:MALFORMED_URL
-* VEEVAVAULT:METHOD_NOT_SUPPORTED
-* VEEVAVAULT:NO_PERMISSION
-* VEEVAVAULT:OPERATION_NOT_ALLOWED
-* VEEVAVAULT:PARAMETER_REQUIRED
 
 ==== Create Documents
 
@@ -163,6 +120,50 @@ Enum (String)
 The document metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
 image:media/tech-ref/image2.png[image,width=241,height=215]
+
+| |X
+|===
+
+*For Configurations:*
+
+link:#veevavault-connector-connection-config[Connection Configuration]
+
+*Throws:*
+
+* VEEVAVAULT:API_LIMIT_EXCEEDED
+* VEEVAVAULT:ATTRIBUTE_NOT_SUPPORTED
+* VEEVAVAULT:INACTIVE_USER
+* VEEVAVAULT:INVALID_DATA
+* VEEVAVAULT:INVALID_DOCUMENT
+* VEEVAVAULT:INSUFFICIENT_ACCESS
+* VEEVAVAULT:MALFORMED_URL
+* VEEVAVAULT:METHOD_NOT_SUPPORTED
+* VEEVAVAULT:NO_PERMISSION
+* VEEVAVAULT:OPERATION_NOT_ALLOWED
+* VEEVAVAULT:PARAMETER_REQUIRED
+
+==== Create Document Renditions
+
+Create Document Renditions on vault with provided metadata in CSV/JSON format.
+
+*<veevavault:create-document-renditions>*
+
+*Parameters:*
+
+[cols=",,,,",options="header",]
+|===
+|*Name* |*Type* |*Description* |*Default Value* |*Required*
+|Metadata Format a|
+Enum (String)
+
+* CSV
+* JSON
+
+|Metadata format either CSV or JSON. | |X
+|Document Metadata |Input Stream a|
+The document metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
+
+image:media/tech-ref/image1.png[image,width=287,height=182]
 
 | |X
 |===
