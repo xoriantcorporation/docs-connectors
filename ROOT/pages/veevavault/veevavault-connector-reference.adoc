@@ -8,9 +8,9 @@ Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#
 
 VeevaVault Connector v1.1.0
 
-Guide: xref:veevavault::./veevavault-connector-get-started.adocs[VeevaVault Connector]
+Guide: xref:./veevavault-connector-get-started.adocs[VeevaVault Connector]
 
-Release Notes: xref:veevavault::./veevavault-connector-release-notes.adoc[VeevaVault Connector Release Notes]
+Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connector Release Notes]
 
 === Configuration
 
