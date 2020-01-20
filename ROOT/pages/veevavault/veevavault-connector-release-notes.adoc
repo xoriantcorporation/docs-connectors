@@ -28,7 +28,7 @@ The Veeva Vault Connector supports these software versions:
 *Fixed in this Release:*
 
 * Export Documents operation should return Job results instead of Job Status response.
-* Get Documents and Get Object Records operations thrown Null pointer exceptions when Document/Field properties list configured as empty or None.
+* Get Documents and Get Object Records operations throws an error when Document/Field properties list configured as empty or None.
 * Spark Message Validator operation implemented to validate and verify Spark message with public key and signature received from Vault. Please refer user guide for more details.
 
 
