@@ -83,7 +83,6 @@ The Daily API Limit Profile to configure API limit threshold for evaluation with
 * link:#delete-document-renditions[*Delete Document Renditions*]
 * link:#delete-documents[*Delete Documents*]
 * link:#delete-object-records[*Delete Object Records*]
-* link:#export-documents[*Download Document*]
 * link:#export-documents[*Export Documents*]
 * link:#get-audit-details[*Get Audit Details*]
 * link:#get-document-renditions-types[*Get Document Renditions*]
@@ -214,7 +213,7 @@ JSON
 |Object Metadata |Input Stream a|
 The object metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image4.png[image,width=273,height=216]
+image:../../assets/images/veevavault/veevavault-connector-create-object-records-input.png[image,width=273,height=216]
 
 | |X
 |===
@@ -258,7 +257,7 @@ Enum (String)
 |Document Metadata |Input Stream a|
 The document metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image5.png[image,width=283,height=113]
+image:../../assets/images/veevavault/veevavault-connector-delete-document-renditions-input.png[image,width=283,height=122]
 
 | |X
 |===
@@ -302,7 +301,7 @@ Enum (String)
 |Document Metadata |Input Stream a|
 The document metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image6.png[image,width=279,height=39]
+image:../../assets/images/veevavault/veevavault-connector-delete-documents-input.png[image,width=301,height=55]
 
 | |X
 |===
@@ -339,7 +338,7 @@ Delete Object Records delete an object records in bulk on vault using object Id 
 |Object Name |String a|
 The list of all vault objects available to select anyone from the list. For e.g
 
-image:media/tech-ref/image3.png[image,width=323,height=246]
+image:../../assets/images/veevavault/veevavault-connector-create-object-records-object-name.png[image,width=323,height=246]
 
 | |X
 |Metadata Format a|
@@ -353,7 +352,7 @@ JSON
 |Object Metadata |Input Stream a|
 The object metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image7.png[image,width=300,height=50]
+image:../../assets/images/veevavault/image7.png[image,width=300,height=50]
 
 | |X
 |===
@@ -397,7 +396,7 @@ Enum (String)
 |Document Metadata |Input Stream a|
 The document metadata (document Ids) either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image6.png[image,width=268,height=39]
+image:../../assets/images/veevavault/veevavault-connector-export-documents-input.png[image,width=297,height=90]
 
 |#[payload] |X
 |Source |Boolean |To exclude source files. |True |
@@ -438,7 +437,7 @@ Get Audit details retrieves an audit details for a specific audit type.
 |Audit Type |String a|
 The list of audit types available on vault to select anyone from the list. For e.g
 
-image:media/tech-ref/image8.png[image,width=299,height=106]
+image:../../assets/images/veevavault/veevavault-connector-get-audit-details-audit-types.png[image,width=299,height=106]
 
 | |X
 |Start Date |String |A Start date to retrieve audit information from date specified. Dates must be YYYY-MM-DDTHH:MM:SSZ format | |
@@ -479,7 +478,7 @@ Get Document renditions types to retrieve document renditions details.
 |Document Metadata |Input Stream a|
 The document metadata contains only *documentId* either in CSV OR JSON format as Input Stream. Metadata as below:
 
-image:media/tech-ref/image9.png[image,width=293,height=38]
+image:../../assets/images/veevavault/veevavault-connector-get-document-renditions-types-input.png[image,width=293,height=38]
 
 | |X
 |===
@@ -554,7 +553,8 @@ Get Object Records retrieves an object records in bulk on vault using object Id 
 |Object Name |String a|
 The list of all vault objects available to select anyone from the list. For e.g
 
-image:media/tech-ref/image3.png[image,width=300,height=246]
+image:../../assets/images/veevavault/veevavault-connector-create-object-records-object-name.png[image,width=323,height=246]
+
 
 | |X
 |Object Fields |List<String> |Object fields based on business requirement can be inserted into list. If not provided it will select all active object fields available to build VQL query and invoke internally to retrieve object records details. | |
@@ -595,7 +595,7 @@ The Get Picklists retrieve all available values configured on a picklist.
 |Picklist Name |String a|
 The list of audit types available on vault to select anyone from the list. For e.g
 
-image:media/tech-ref/image10.png[image,width=293,height=249]
+image:../../assets/images/veevavault/veevavault-connector-get-picklists-name.png[image,width=293,height=249]
 
 | |X
 |===
@@ -682,7 +682,6 @@ The Spark Validator validates and verify the Spark message with signature and pu
 Boolean
 |Flag to include Spark Headers in Spark Message Validator output. 
 
-image:media/tech-ref/image13.png[image,width=590,height=35]
 |FALSE|
 |Public Key Path|
 String
@@ -744,7 +743,7 @@ Enum (String)
 |Document Metadata |Input Stream a|
 The editable document metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image11.png[image,width=250,height=343]
+image:../../assets/images/veevavault/veevavault-connector-update-documents-input.png[image,width=286,height=343]
 
 | |X
 |===
@@ -781,7 +780,7 @@ Update Object Records updates an object records in bulk on vault using editable 
 |Object Name |String a|
 The list of all vault objects available to select anyone from the list. For e.g
 
-image:media/tech-ref/image3.png[image,width=322,height=246]
+image:../../assets/images/veevavault/veevavault-connector-create-object-records-object-name.png[image,width=323,height=246]
 
 | |X
 |Metadata Format a|
@@ -795,7 +794,7 @@ JSON
 |Object Metadata |Input Stream a|
 The object metadata either in CSV OR JSON format as Input Stream respective to Metadata format option selected. Metadata as below:
 
-image:media/tech-ref/image12.png[image,width=309,height=346]
+image:../../assets/images/veevavault/veevavault-connector-update-object-records-input.png[image,width=283,height=346]
 
 | |X
 |===
