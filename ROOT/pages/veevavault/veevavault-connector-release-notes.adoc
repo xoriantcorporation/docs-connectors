@@ -6,9 +6,9 @@ endif::[]
 
 Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Select]
 
-Guide: xref:guide::./veevavault-connector-get-started.adocs[VeevaVault Connector]
+Guide: xref:./veevavault-connector-get-started.adoc[VeevaVault Connector]
 
-Reference: xref:reference::./veevavault-connector-reference.adoc[VeevaVault Connector Reference]
+Reference: xref:./veevavault-connector-reference.adoc[VeevaVault Connector Reference]
 
 *Version 1.1.0*
 
@@ -34,7 +34,7 @@ The Veeva Vault Connector supports these software versions:
 
 *Version 1.0.3*
 
-August 2019
+*August 2019*
 
 This is initial release
 
