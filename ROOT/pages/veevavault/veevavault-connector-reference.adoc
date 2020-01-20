@@ -16,7 +16,6 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 
 ==== VeevaVault Connector Connection Config
 
-*Connection Config:*
 
 [cols=",,,,",options="header",]
 |===
