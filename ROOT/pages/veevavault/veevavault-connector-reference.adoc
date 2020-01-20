@@ -638,13 +638,13 @@ A VQL Query to be define as per Veeva VQL specification to be executed. Refer ht
 |Input Parameters |Map<String, Object> a|
 A Maps of String and Object in which every item represents a row to be inserted, and the map contains the parameter names as keys and the value the parameter is bound to. E.g:
 
-\{
+{
 
 *'table': 'site__v'*
 
 }
 
-|#[\{}] |
+|#[{}] |
 |Fetch Size |Integer |The fetch size which limit the records per page |100 |
 |Batch Size |Integer |The batch size which accommodate number of pages in specified number of batches. |10 |
 |===
