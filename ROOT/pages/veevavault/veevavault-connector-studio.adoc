@@ -1,4 +1,4 @@
-= VeevaVault - Studio Configuration - Mule 4
+= VeevaVault Connector Studio Configuration - Mule 4
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -26,8 +26,8 @@ image:../../assets/images/veevavault/veevavault-connector-maven-test.png[image,w
 To configure a connector in Anypoint Studio:
 
 . Add the connector to your Studio project
+. Configure an input source for the flow
 . Configure the connector
-. Configure an input source for the connector
 
 == Add the Connector to Your Project
 
@@ -51,13 +51,13 @@ Anypoint Studio provides two ways to add the connector to your Studio project: f
 . Click *Add*.
 . Click *Finish*.
 
-== Configure an Input Source
+== Configure an Input Source for the flow
 
-Configure an input source for the connector such as an operation for the Veeva Vault connector, *HTTP Listener*, or *Scheduler*.
+Configure an input source for the flow such as HTTP Connector - *HTTP Listener*, or *Scheduler*.
 
 == Configure the Connector
 
-To use Veeva Vault Connector in your Mule app, configure a global Veeva Vault element that can be used by all Veeva Vault Connector operations in the application.
+To use VeevaVault Connector in your Mule app, configure a global VeevaVault element that can be used by all VeevaVault Connector operations in the application.
 
 To configure this connector:
 
@@ -79,7 +79,7 @@ image:../../assets/images/veevavault/veevavault-connector-basic-authentication-g
 |*Client Id* |Enter Client Id in format *\{organisation}-{company\|team}* to send with each request in header for tracking purpose. The Client Id is prefix with *"mulesoft"* and suffix with *"client-vaultconnector"* internally. E.g : *mulesoft-abcpharma-clinicalprod-client-vaultconnector*
 |===
 
-In the image above, the placeholder values refer to a configuration file placed in the folder (src/main/resources) of your project. You can either hardcode your credentials into the global configuration properties or reference a configuration file that contains these values. For simpler maintenance and better re-usability of your project, Mule recommends that you use a configuration file. Keeping these values in a separate file is useful if you need to deploy to different environments, such as production, development, and QA, where your access credentials differ. E.g. Below is an example snippet of configuration.yaml file under folder (src/main/resources/config)
+In the image above, the placeholder values refer to a configuration file placed in the folder (src/main/resources) of your project. You can either hardcode your credentials into the global configuration properties or reference a configuration file that contains these values. For simpler maintenance and better re-usability of your project, Mule recommends that you use a configuration file. Keeping these values in a separate file is useful if you need to deploy to different environments, such as production, development, and QA, where your access credentials differ. E.g. Below is an example snippet of *configuration.yaml* file under folder (src/main/resources/config)
 
 --------------------
 	#Veeva Vault details
@@ -93,6 +93,7 @@ In the image above, the placeholder values refer to a configuration file placed 
 
 The Connection Configuration will do Basic Authentication which will accept required parameters – *Vault URL, Username, Password* to perform connection with Veeva Vault instance to retrieve Session. The retrieved session will be used for each operation configured in Mule application for sending request.
 
++
 . In the *Veeva Vault Config* window, Advanced tab.
 
 image:../../assets/images/veevavault/veevavault-connector-basic-authentication-advanced.png[image,width=614,height=622]

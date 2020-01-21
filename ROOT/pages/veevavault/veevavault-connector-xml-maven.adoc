@@ -1,4 +1,4 @@
-= VeevaVault - XML and Maven Support - Mule 4
+= VeevaVault Connector XML and Maven Support - Mule 4
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
