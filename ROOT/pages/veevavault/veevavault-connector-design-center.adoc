@@ -1,4 +1,4 @@
-= VeevaVault Design Center Configuration - Mule 4
+= VeevaVault Connector Design Center Configuration - Mule 4
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
