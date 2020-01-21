@@ -55,7 +55,7 @@ The Create Documents operation allows to create single or multiple document(s) w
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-*Follow the instructions mentioned in link:#configuration[Connector Configuration]*
+*Follow the instructions mentioned in xref:veevavault::./veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
 *Operation Configuration:*
 
@@ -822,7 +822,7 @@ In non-repeatable stream connector operation would returns stream as number of r
 
 == Next Step
 
-After you complete configuring the connector, you can try the xref:veevavault/veevavault-connector-examples.adoc[Examples].
+After you complete configuring the connector, you can try the xref:./veevavault-connector-examples.adoc[Examples].
 
 == See Also
 
