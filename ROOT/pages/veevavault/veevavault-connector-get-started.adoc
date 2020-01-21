@@ -47,7 +47,7 @@ To use this connector, you need:
 
 * Starting user -- To create your Mule app, see xref:./veevavault-connector-design-center.adoc[Design Center Configuration] or xref:./veevavault-connector-studio.adoc[Studio Configuration]. The xref:./veevavault-connector-config-topics.adoc[Additional Configuration Information]
 topic helps extend your understanding of the Veeva Vault connector. The xref:./veevavault-connector-examples.adoc[Examples] topic provides one or more use cases for using the connector.
-* Power user - Read the xref:./veevavault-connector-xml-maven.adoc[XML and Maven Support], xref:./veevavault-connector-config-topics.adoc[Additional Configuration Information], and xref:./veevavault-connector-examples.adoc[Examples] topics.
+* Power user -- Read the xref:./veevavault-connector-xml-maven.adoc[XML and Maven Support], xref:./veevavault-connector-config-topics.adoc[Additional Configuration Information], and xref:./veevavault-connector-examples.adoc[Examples] topics.
 
 == Learn Using Exchange Templates and Examples
 
