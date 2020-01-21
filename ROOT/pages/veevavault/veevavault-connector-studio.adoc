@@ -95,6 +95,7 @@ The Connection Configuration will do Basic Authentication which will accept requ
 
 +
 . In the *Veeva Vault Config* window, Advanced tab.
++
 
 image:../../assets/images/veevavault/veevavault-connector-basic-authentication-advanced.png[image,width=614,height=622]
 
