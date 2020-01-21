@@ -95,7 +95,7 @@ The document type, subtype and classification are optional, if none are selected
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-**Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]* in link:#configuration[Connector Configuration]*
+*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
 *Operation Configuration:*
 
@@ -129,7 +129,7 @@ The Delete Documents operation allows to delete document single or multiple docu
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-*Follow the instructions mentioned in link:#configuration[Connector Configuration]*
+*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
 *Operation Configuration:*
 
@@ -164,7 +164,7 @@ The Update Documents operation allows to update bulk document(s) with provided e
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-*Follow the instructions mentioned in link:#configuration[Connector Configuration]*
+*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
 *Operation Configuration:*
 
@@ -279,7 +279,7 @@ The Create Document Renditions operation allows to add document renditions in bu
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-*Follow the instructions mentioned in link:#configuration[Connector Configuration]*
+*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
 *Operation Configuration:*
 
