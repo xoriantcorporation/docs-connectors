@@ -55,9 +55,8 @@ The Create Documents operation allows to create single or multiple document(s) w
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-*Follow the instructions mentioned in <<veevavault-connector-reference.adoc#,veevavault-connector-connection-config[Connector Configuration]>>*
+*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
-link:veevavault-connector-reference.adoc#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*]
 
 *Operation Configuration:*
 
