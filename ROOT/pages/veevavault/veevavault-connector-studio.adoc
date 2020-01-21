@@ -61,10 +61,15 @@ To use VeevaVault Connector in your Mule app, configure a global VeevaVault elem
 
 To configure this connector:
 
++
 . To create a global element for the connector, click the *Global Elements* tab at the base of the canvas, and then click *Create*.
++
 . In the *Choose Global Type* window, expand *Connector Configuration*, and click *Veeva Vault Config*.
++
 . Click *OK*
++
 . In the *Veeva Vault Config* window, General tab.
++
 
 image:../../assets/images/veevavault/veevavault-connector-basic-authentication-general.png[image,width=615,height=621]
 
@@ -95,7 +100,7 @@ The Connection Configuration will do Basic Authentication which will accept requ
 
 +
 . In the *Veeva Vault Config* window, Advanced tab.
-+
+
 
 image:../../assets/images/veevavault/veevavault-connector-basic-authentication-advanced.png[image,width=614,height=622]
 
