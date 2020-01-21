@@ -98,7 +98,7 @@ In the image above, the placeholder values refer to a configuration file placed 
 
 The Connection Configuration will do Basic Authentication which will accept required parameters – *Vault URL, Username, Password* to perform connection with Veeva Vault instance to retrieve Session. The retrieved session will be used for each operation configured in Mule application for sending request.
 
-+
+
 . In the *Veeva Vault Config* window, Advanced tab.
 +
 
