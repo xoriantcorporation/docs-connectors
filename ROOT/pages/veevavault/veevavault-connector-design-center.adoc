@@ -1,4 +1,4 @@
-= VeevaVault - Design Center Configuration - Mule 4
+= VeevaVault Design Center Configuration - Mule 4
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -11,7 +11,7 @@ To create an app in Flow Designer:
 * Configure the input source (trigger) for your app.
 * Add the connector as a component to process the input for the app.
 
-For information on Flow Designer field values, see the xref:veevavault/veevavault-connector-reference.adoc[Veeva Vault Connector Reference].
+For information on Flow Designer field values, see the xref:./veevavault-connector-reference.adoc[VeevaVault Connector Reference].
 
 
 == Configure the Input Source Trigger

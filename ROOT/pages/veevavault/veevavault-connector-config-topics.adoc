@@ -519,7 +519,7 @@ image:../../assets/images/veevavault/veevavault-connector-update-object-records-
 
 The Query Operation allows to execute specified VQL query on Vault and retrieve result in paginated data input stream. Place For-Each/Splitter after Query Operation to fetch each record in sequence order. Note - Do not specify LIMIT and OFFSET in VQL query. These parameters are incorporated internally.
 
-Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[Streaming and Pagination] for more details.
+Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
 
 *Configurations:*
 
@@ -609,7 +609,7 @@ image:../../assets/images/veevavault/veevavault-connector-get-picklists-output.p
 
 The Get Audit Detail operation allows to retrieve audit details for specified audit type.
 
-Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[Streaming and Pagination] for more details.
+Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
 
 *Configurations:*
 
