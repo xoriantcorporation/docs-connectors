@@ -57,7 +57,7 @@ image:../../assets/images/veevavault/veevavault-connector-basic-configuration.pn
 
 *Follow the instructions mentioned in <<veevavault-connector-reference.adoc#,veevavault-connector-connection-config[Connector Configuration]>>*
 
-<<veevavault-connector-reference.adoc#,connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*]>>
+link:veevavault-connector-reference.adoc#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*]
 
 *Operation Configuration:*
 
