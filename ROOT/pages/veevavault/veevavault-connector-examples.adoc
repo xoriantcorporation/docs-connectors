@@ -1,10 +1,9 @@
-= VeevaVault - Examples - Mule 4
+= VeevaVault Connector Examples - Mule 4
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../assets/images/
 
-== Veeva Vault - Examples - Mule 4
 
 The example project we provide can be a starting point for your MuleSoft project. 
 
@@ -285,7 +284,7 @@ To create Mule flow, follow these instructions:
 --------------------	
 
 
-image:media/user-guide/image64.png[image,width=425,height=242]
+image:../../assets/images/veevavault/veevavault-connector-spark-validator-example.png[image,width=425,height=242]
 
 == XML Code
 
@@ -303,11 +302,11 @@ image:media/user-guide/image64.png[image,width=425,height=242]
 
 == Templates
 
-Use Case : Integrate https://anypoint.mulesoft.com/exchange/c5788341-a495-4d6f-a931-875757082c63/filesystem-to-veeva-vault-template/[FileSystem to VeevaVault]
+*Use Case* : Integrate https://anypoint.mulesoft.com/exchange/c5788341-a495-4d6f-a931-875757082c63/filesystem-to-veeva-vault-template/[FileSystem to VeevaVault]
 
-Use Case : Integrate https://anypoint.mulesoft.com/exchange/c5788341-a495-4d6f-a931-875757082c63/veevavault-connector-project-templates/[VeevaVault to FileSystem]
+*Use Case* : Integrate https://anypoint.mulesoft.com/exchange/c5788341-a495-4d6f-a931-875757082c63/veevavault-connector-project-templates/[VeevaVault to FileSystem]
 
-Use Case : Auto approval of loan applications through Spark message https://anypoint.mulesoft.com/exchange/c5788341-a495-4d6f-a931-875757082c63/spark-message-solution-template/[Spark Message End Solution]
+*Use Case* : Auto approval of loan applications through Spark message https://anypoint.mulesoft.com/exchange/c5788341-a495-4d6f-a931-875757082c63/spark-message-solution-template/[Spark Message End Solution]
 
 == See Also
 
