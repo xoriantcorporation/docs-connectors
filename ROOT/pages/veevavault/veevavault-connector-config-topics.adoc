@@ -203,7 +203,7 @@ The following is an example of the Export Documents operation returning job resu
  
 ** ++file++
 
-Has the format: ++"/{jobId}/{documentId}/{major-minor-version}/{filename}"++, which is the absolute file path location on the Vault FTP server staging area.
+Has the format: +"/{jobId}/{documentId}/{major-minor-version}/{filename}"+, which is the absolute file path location on the Vault FTP server staging area.
  
 ** ++user_id__v++
 
