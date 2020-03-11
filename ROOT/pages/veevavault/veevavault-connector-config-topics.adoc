@@ -704,9 +704,9 @@ image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api.png[im
 |*Method*|Select method to invoke Veeva Rest API from drop down list. Default is GET.
 |*Path*|URI path to invoke Veeva Rest API. E.g: */objects/documents/{doc_id}*
 |*Body*|Body to send with a request to invoke Veeva Rest API. Default is *#[payload]*.
-|*Headers*|The Spark headers received from the Vault. Default is *#[attributes.headers]*
+|*Headers*|Headers in key-value format to send along with request, if there are no headers required in a request keep it empty. Default is *Empty list*.
 |*URI Parameters*|URI Parameters in key-value format to resolve value in a path, if there are no URI parameters in path keep it empty. Default is an *Empty List*.
-|*Query Parameters*|Query Parameters in key-value format to send along with request, if there are no query parameters required in request keep it empty. Default is *Empty list*.
+|*Query Parameters*|Query Parameters in key-value format to send along with request, if there are no query parameters required in a request keep it empty. Default is *Empty list*.
 |*Request Streaming Mode*|Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
 |*Input*|By default, payload is a stream.
 |*Output*|Invoke Rest API response will be in JSON/XML depends on header *Accept* provided. By default it is JSON format.
