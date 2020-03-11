@@ -39,7 +39,7 @@ The target component enables your app to process data received from the trigger.
 . Select Click here to set it up to set up other required fields.
 . Enter Configuration Name.
 . Click Add Connection and enter connection name.
-. In Connection Type, Select *1 - Basic Connection* or *2 - OAuth2 Connection*.
+. In Connection Type, Select "*1 - Basic Connection*" or "*2 - OAuth2 Connection*".
 . In General tab, enter below required fields:
 +
 [cols=",,",options="header",]
@@ -50,7 +50,7 @@ The target component enables your app to process data received from the trigger.
 |*Username* |Enter the Veeva Vault instance username. |Yes
 |*Password* |Enter the corresponding password. |Yes
 |*Version* |Enter the Veeva Vault instance version (e.g: v19.1). |Yes
-|*Client Id* |Enter Client Id in format *\{organisation}-{company\|team}* (e.g: *"abcpharma-clinicalprod"*) to send with each request in header for tracking purpose. Before sending, the Client Id is prefix with *"mulesoft"* and suffix with *"client-vaultconnector"* internally as shown in e.g:   *mulesoft-abcpharma-clinicalprod-client-vaultconnector*. |Yes
+|*Client Id* |Enter Client Id in format *\{organisation}-{company\|team}* (for example: *"abcpharma-clinicalprod"*) to send with each request in header for tracking purpose. Before sending, the Client Id is prefix with *"mulesoft"* and suffix with *"client-vaultconnector"* internally as shown in e.g:   *mulesoft-abcpharma-clinicalprod-client-vaultconnector*. |Yes
 |===
 +
 . In Advanced tab, Select Burst API Limit Config and Daily API Limit Config.
