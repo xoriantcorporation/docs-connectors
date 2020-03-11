@@ -716,11 +716,13 @@ The following operations in the connector provide a pagination mechanism based o
 While using these above paginated operations make sure to place +For-Each/Splitter+ to retrieve each object (metadata’s in JSON format) at a time. The pagination operations have *Fetch Size* and *Batch Size.*
 
 * *Fetch Size:*
+
 The Fetch Size is a limit number of records that can be retrieve in a single page. The operation returns the pages with the fetch size number of JSON object records. 
 
 In some cases, Veeva APIs auto-calculate the fetch size (number of records on each page) based on record size and the calculation exceeds the standard record size. The operation returns calculated records on each page.
 
 * *Batch Size:*
+
 The Batch Size is the number of pages to return in each batch and each page will have the fetch size number of records. The operation returns a number of records (metadata in JSON format) per batch, and is calculated like in the following example:
 
 --------------------
