@@ -49,20 +49,17 @@ Following are the list of operations with the connector and its configurations:
 
 * link:#invoke-rest-api[*Invoke Rest API*]
 
-==== Create Documents
-
-The Create Documents operation allows to create single or multiple document(s) with provided document metadata in CSV or JSON format. Make sure you have uploaded document files on Vault FTP server location for document content to attach with created documents.
-
-*Configurations:*
-
-*Connector Configuration:*
+==== Connector Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
 *Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
+==== Create Documents
 
-*Operation Configuration:*
+The Create Documents operation allows to create single or multiple document(s) with provided document metadata in CSV or JSON format. Make sure you have uploaded document files on Vault FTP server location for document content to attach with created documents.
+
+=== Create Documents Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-create-documents.png[image,width=601,height=90]
 
