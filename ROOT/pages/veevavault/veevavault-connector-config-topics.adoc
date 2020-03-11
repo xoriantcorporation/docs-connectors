@@ -201,19 +201,19 @@ The following is an example of the Export Documents operation returning job resu
 
 .The previous example shows the following attributes:
  
-- file +
-Has the format: +"/{jobId}/{documentId}/{major-minor-version}/{filename}"+ which is the absolute file path location on the Vault FTP server staging area.
+** file +
+Has the format: ++"/{jobId}/{documentId}/{major-minor-version}/{filename}"++, which is the absolute file path location on the Vault FTP server staging area.
  
-- user_id__v +
-Vault system user ID of a user whose credentials are configured in the connector. The folder is created on the Vault FTP server staging area root location under where the exported file is located. The folder is created with the name of the user ID prefixed with the letter +‘u’+; for example: +"/uXXXXXXX/{jobId}/{documentId}/{major-minor-version}/{filename}\)"+.
+** user_id__v +
+Vault system user ID of a user whose credentials are configured in the connector. The folder is created on the Vault FTP server staging area root location under where the exported file is located. The folder is created with the name of the user ID prefixed with the letter +‘u’+; for example: ++"/uXXXXXXX/{jobId}/{documentId}/{major-minor-version}/{filename}\)"++.
 
-- id +
+** id +
 Document ID of the exported document file.
 
-- major_version_number__v +
+** major_version_number__v +
 Major version number of the exported document file
 
-- minor_version_number__v +
+** minor_version_number__v +
 Minor version number of the exported document file
 
 
@@ -240,7 +240,7 @@ The export documents job status response is under the Output tab:
 
 image:../../assets/images/veevavault/veevavault-connector-export-documents-output.png[image,width=288,height=256]
 
-*Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[Connector Operations SUCCESS and FAILURE Response].*
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[Connector Operations SUCCESS and FAILURE Response].
 
 |===
 
