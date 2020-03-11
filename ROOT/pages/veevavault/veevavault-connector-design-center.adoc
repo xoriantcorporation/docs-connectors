@@ -42,7 +42,7 @@ The target component enables your app to process data received from the trigger.
 . In Connection Type, Select *1 - Basic Connection* or *2 - OAuth2 Connection*.
 . In General tab, enter below required fields:
 +
-[cols=",",options="header",]
+[cols=",,",options="header",]
 |===
 |*Field* |*Description* |*Required?*
 |*Name* |Enter a name for this configuration to reference it later. |Yes
