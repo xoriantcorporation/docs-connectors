@@ -150,7 +150,7 @@ image:../../assets/images/veevavault/veevavault-connector-update-documents.png[i
 |===
 |Field |Description
 |Metadata Format |Select CSV or JSON option to accept document metadata in specified format.
-|Document Metadata |Document metadata payload with the required editable metadata in CSV or JSON format. The payload should be in the format specified in the Metadata Format field.
+|Document Metadata |Document metadata payload with the required editable metadata in CSV or JSON format. The payload should be in the format specified in the *Metadata Format* field.
 |Input a|
 The following is the list of editable document metadata to update documents on the vault. The payload should have only the editable metadata for that vault.
 
@@ -163,7 +163,7 @@ image:../../assets/images/veevavault/veevavault-connector-update-documents-outpu
 
 |===
 
-==== Export Documents
+=== Export Documents
 
 An Export Documents operation enables you to query a set of documents for export to your vault’s FTP staging server. It is recommended to use Export Documents operation is separate asynchronous flow using Async Scope and passing payload with document ids. Using asynchronously the operation executes in separate flow thread, will wait for specified polling interval to poll the Job status until it gets successful while the main flow continues its process.
 
@@ -199,33 +199,25 @@ The following is an example of the Export Documents operation returning job resu
 ]
 --------------------
 
-The previous example shows the following attributes:
+.The previous example shows the following attributes:
  
-- file 
+- file +
 Has the format: +"/{jobId}/{documentId}/{major-minor-version}/{filename}"+ which is the absolute file path location on the Vault FTP server staging area.
  
-- user_id__v
+- user_id__v +
 Vault system user ID of a user whose credentials are configured in the connector. The folder is created on the Vault FTP server staging area root location under where the exported file is located. The folder is created with the name of the user ID prefixed with the letter +‘u’+; for example: +"/uXXXXXXX/{jobId}/{documentId}/{major-minor-version}/{filename}\)"+.
 
-- id
+- id +
 Document ID of the exported document file.
 
-- major_version_number__v
+- major_version_number__v +
 Major version number of the exported document file
 
-- minor_version_number__v 
+- minor_version_number__v +
 Minor version number of the exported document file
 
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Export Documents Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-export-documents.png[image,width=601,height=221]
 
@@ -233,22 +225,22 @@ image:../../assets/images/veevavault/veevavault-connector-export-documents.png[i
 |===
 |*Field* |*Description*
 |*Metadata Format* |Select CSV or JSON option to accept metadata document Id in specified format.
-|*Document Metadata* |Document Metadata payload contains document Ids in either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
-|*Source* |Optional, to exclude source files set to false. Default is true.
-|*Renditions* |Optional, to include renditions set to true. Default is false.
-|*All Versions* |Optional, to include all versions or latest version set to true. Default is false.
-|*Polling Interval* |Optional, to polls vault at specified interval in seconds until job is successful. Default is 30 seconds.
+|*Document Metadata* |Document Metadata payload contains document IDs in either CSV or JSON format. The payload should be in the format specified in the *Metadata Format* field.
+|*Source* |(Optional) To exclude source files set to +false+. Default is +true+.
+|*Renditions* |(Optional) To include renditions set to +true+. Default is +false+.
+|*All Versions* |(Optional) To include all versions or latest version set to +true+. Default is +false+.
+|*Polling Interval* |(Optional) Polls vault at specified interval (in seconds) until job is successful. Default is 30 seconds.
 |*Input* a|
-You can find following input document metadata required to export document(s) from vault to FTP staging server. Make sure payload should have mandatory metadata as per vault.
+Input document metadata required to export documents from the vault to the FTP staging server. Make sure the payload has the mandatory metadata required for the vault.
 
 image:../../assets/images/veevavault/veevavault-connector-export-documents-input.png[image,width=297,height=90]
 
 |*Output* a|
-You can find export documents job status response under output tab.
+The export documents job status response is under the Output tab:
 
 image:../../assets/images/veevavault/veevavault-connector-export-documents-output.png[image,width=288,height=256]
 
-*Note : Its important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[Connector Operations SUCCESS and FAILURE Response].*
+*Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[Connector Operations SUCCESS and FAILURE Response].*
 
 |===
 
