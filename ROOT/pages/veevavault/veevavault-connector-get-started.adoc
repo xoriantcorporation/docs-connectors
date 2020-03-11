@@ -12,15 +12,16 @@ Anypoint Connector for Veeva Vault lets you connect Mule flows to the Veeva Vaul
 
 This connector works with the https://developer.veevavault.com/api/19.1/#authentication[Veeva Vault REST, Bulk, and Streaming API], depending on the operation you configure. Each API call uses an JSON/CSV request and returns JSON input stream response over an HTTPS connection. All required request headers, error handling, and HTTPS connection configurations are built into the connector.
 
-The Veeva Vault Connector can be use in the Mule application as an outbound connector with CRUD (Create, Retrieve, Update, Delete), Query, Export, Spark Validator operations on following Vault Objects. These operations are discussed later in this document.
+The Veeva Vault Connector can be use in the Mule application as an outbound connector with CRUD (Create, Retrieve, Update, Delete), Query, Export, Spark Validator, Invoke Rest API operations on following Vault Objects. These operations are discussed later in this document.
 
-* Documents – Create, Retrieve, Update, Delete, Export.
-* Document Renditions – Create, Retrieve, Delete.
-* Vault Object – Create, Retrieve, Update, Delete.
-* Picklists – Retrieve.
-* Audit Trail – Retrieve.
-* Query – VQL Query to query on Documents, Vault Object, Workflows.
-* Spark Validator – Validates and verifies the Spark message triggered from Vault with signature.
+* Documents: Create, Retrieve, Update, Delete, Export.
+* Document Renditions: Create, Retrieve, Delete.
+* Vault Object: Create, Retrieve, Update, Delete.
+* Picklists: Retrieve.
+* Audit Trail: Retrieve.
+* Query: VQL Query to query on Documents, Vault Object, Workflows.
+* Spark Validator: Validates and verifies the Spark message triggered from Vault with signature.
+* Invoke Rest API: Operation to invoke https://developer.veevavault.com/api/19.1/#documents[Veeva Vault Rest APIs.]
 
 You can configure the Veeva Vault Connector using Basic Authentication configuration with credentials to connect to a Veeva Vault instance and perform operations.
 

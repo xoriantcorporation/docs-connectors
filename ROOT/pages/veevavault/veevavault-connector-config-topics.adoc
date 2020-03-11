@@ -45,6 +45,10 @@ Following are the list of operations with the connector and its configurations:
 
 * link:#spark-validator[*Spark Validator*]
 
+*Invoke Rest API*
+
+* link:#invoke-rest-api[*Invoke Rest API*]
+
 ==== Create Documents
 
 The Create Documents operation allows to create single or multiple document(s) with provided document metadata in CSV or JSON format. Make sure you have uploaded document files on Vault FTP server location for document content to attach with created documents.
@@ -645,7 +649,7 @@ The Spark Validator operation validates and verify spark message triggered from 
 
 The output of Spark Validator operation is Spark attributes (optional) with Spark Message as it is received from Vault.
 
-*Note* – Before triggering Spark message from Vault make sure to raise support ticket with Veeva Support to increase the time interval (say – 10 seconds) for Spark Message to resend/retry. By default, it is configured as 3 seconds which is less for Spark Validator to complete message validation and verification.
+*Note* – Before triggering a Spark message from the Vault make sure to raise a support ticket with Veeva Support to increase the Message Queue Request Timeout to 15 seconds. By default, it is configured as 5 seconds, which is less than the time required for Spark Validator to complete message validation and verification.
 
 *Note* – As per Veeva Systems the public key (00001.pem) expires every two years. The customer gets notification well advanced about its expiry date, if you are using this operation in Mule application flow make sure that after public key expiration date you need to remove public key file from the path configured in field (Public Key Path) and it will create new public key file while execution. Otherwise Spark message verification would be failing as *INVALID_SPARK_MESSAGE*. The Mule application deployed on Cloudhub with default path need to restart for successful Spark Message verification.
 
@@ -675,6 +679,37 @@ image:../../assets/images/veevavault/veevavault-connector-spark-validator-input.
 |*Output*|You can find the following output returns from Spark Validator operation.
 
 image:../../assets/images/veevavault/veevavault-connector-spark-validator-output.png[image,width=280,height=265]
+
+|===
+
+==== Invoke Rest API
+
+The Invoke Rest API operation allows to invoke Veeva Vault Rest APIs. The response returned is either in JSON or XML depends on header *Accept* value provided. By default it returns in JSON format.
+
+*Configurations:*
+
+*Connector Configuration:*
+
+image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
+
+Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
+
+*Operation Configuration:*
+
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api.png[image,width=852,height=600]
+
+[cols=",",options="header",]
+|===
+|*Field* |*Description*
+|*Method*|Select method to invoke Veeva Rest API from drop down list. Default is GET.
+|*Path*|URI path to invoke Veeva Rest API. E.g: */objects/documents/{doc_id}*
+|*Body*|Body to send with a request to invoke Veeva Rest API. Default is *#[payload]*.
+|*Headers*|The Spark headers received from the Vault. Default is *#[attributes.headers]*
+|*URI Parameters*|URI Parameters in key-value format to resolve value in a path, if there are no URI parameters in path keep it empty. Default is an *Empty List*.
+|*Query Parameters*|Query Parameters in key-value format to send along with request, if there are no query parameters required in request keep it empty. Default is *Empty list*.
+|*Request Streaming Mode*|Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
+|*Input*|By default, payload is a stream.
+|*Output*|Invoke Rest API response will be in JSON/XML depends on header *Accept* provided. By default it is JSON format.
 
 |===
 

@@ -68,6 +68,8 @@ To configure this connector:
 +
 . Click *OK*
 +
+. Select *1 - Basic Connection* from Connection list.
++
 . In the Veeva Vault Config window, *General* tab.
 +
 image:../../assets/images/veevavault/veevavault-connector-basic-authentication-general.png[image,width=615,height=621]
