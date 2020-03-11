@@ -251,19 +251,11 @@ Note : Check the Success and Failure response status of operations in link:#conn
 
 |===
 
-==== Create Document Renditions:
+=== Create Document Renditions:
 
-The Create Document Renditions operation allows to add document renditions in bulk. Your vault must be in Migration Mode before using this operation. It takes maximum CSV input data of size 1GB with value in standard UTF-8 encoded.
+The Create Document Renditions operation enables you to add document renditions in bulk. Your vault must be in Migration Mode before using this operation. It takes CSV input data with a maximum size of 1 GB with a standard UTF-8-encoded value.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
-
-*Operation Configuration:*
+==== Create Document Renditions Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-create-document-renditions.png[image,width=601,height=90]
 
@@ -271,68 +263,52 @@ image:../../assets/images/veevavault/veevavault-connector-create-document-rendit
 |===
 |*Field* |*Description*
 |*Metadata Format* |Select CSV or JSON option to accept document metadata in specified format.
-|*Document Metadata* |Document Metadata payload with required metadata either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
+|*Document Metadata* |Document metadata payload with required metadata in CSV or JSON format. The payload must be in format specified in the *Metadata Format* field.
 |*Input* a|
-You can find following list of document metadata required in payload under Input tab of operation.
+Document metadata required in payload under the Input tab:
 
 image:../../assets/images/veevavault/veevavault-connector-create-document-renditions-input.png[image,width=280,height=188]
 
 |*Output* a|
-You can find following operation output or response under Output tab.
+Operation output or response under the Output tab:
 
 image:../../assets/images/veevavault/veevavault-connector-create-document-renditions-output.png[image,width=283,height=202]
 
-*Note* : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note: Check the Success and Failure response status of operations  in  link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Get Document Renditions Types
+=== Get Document Renditions Types
 
-The Get Document Renditions Types operation allows to retrieve document renditions types detail.
+The Get Document Renditions Types operation enables you to retrieve document renditions types details.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Get Document Renditions Types Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-get-document-renditions-types.png[image,width=601,height=61]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Document Metadata* |Document Id in payload either in CSV or JSON format.
+|*Document Metadata* |Document ID in the payload in either in CSV or JSON format.
 |*Input* a|
-You can see document Id required in payload under Input tab of operation to retrieve document renditions details
+Document ID required in the payload is under the Input tab of the retrieve document renditions details operation:
 
 image:../../assets/images/veevavault/veevavault-connector-get-document-renditions-types-input.png[image,width=293,height=38]
 
 |*Output* a|
-You can find following operation output or response under Output tab.
+The following operation output or response is under the Output tab:
 
 image:../../assets/images/veevavault/veevavault-connector-get-document-renditions-types-output.png[image,width=300,height=145]
 
-*Note* : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Delete Document Renditions
+=== Delete Document Renditions
 
-The Delete Document Renditions operation allows to delete document renditions in bulk using CSV or JSON format input metadata.
+The Delete Document Renditions operation enables you to delete document renditions in bulk using CSV or JSON format input metadata.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Delete Document Renditions Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-delete-document-renditions.png[image,width=601,height=90]
 
@@ -340,178 +316,142 @@ image:../../assets/images/veevavault/veevavault-connector-delete-document-rendit
 |===
 |*Field* |*Description*
 |*Metadata Format* |Select CSV or JSON option to accept document metadata in specified format.
-|*Document Metadata* |Document Metadata payload with required metadata either in CSV or JSON format.
+|*Document Metadata* |Document Metadata payload with the required metadata in CSV or JSON format (specified in the *Metadata Format* field).
 |*Input* a|
-You can find following list of document metadata required to create document(s) on vault. Make sure payload should have mandatory metadata as per vault.
+Document metadata required to create documents on the vault. Make sure the payload has the mandatory metadata required for the vault.
 
 image:../../assets/images/veevavault/veevavault-connector-delete-document-renditions-input.png[image,width=283,height=122]
 
 |*Output* a|
-You can find delete document renditions operation output status or response from vault.
+Delete document renditions operation output status or response from the vault:
 
 image:../../assets/images/veevavault/veevavault-connector-delete-document-renditions-output.png[image,width=285,height=208]
 
-*Note* : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Create Object Records
+=== Create Object Records
 
-The Create Object Records operation allows to create bulk object records for selected vault object with provided object metadata in CSV or JSON format.
+The Create Object Records operation enables you to create bulk object records for the selected vault object with the provided object metadata in CSV or JSON format.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Create Object Records Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-object-records.png[image,width=601,height=112]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Object Name* |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault object list. Select the object name from the list to create records for selected object.
+|*Object Name* |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault object list. Select the object name from the list to create records for selected object.
 |*Metadata Format* |Select CSV or JSON option to accept object metadata in specified format.
-|*Object Metadata* |Object fields payload with required metadata either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
+|*Object Metadata* |Object field’s payload with the required metadata in CSV or JSON format. Make sure the payload is in the format specified in the *Metadata Format* field.
 |*Input* a|
-You can find following list of object metadata required to create object records.
+The following shows the list of object metadata required to create object records:
 
 image:../../assets/images/veevavault/veevavault-connector-create-object-records-input.png[image,width=283,height=330]
 
 |*Output* a|
-You can find operation output or response retrieved from vault for an object records created.
+Operation output or responses retrieved from the vault for a created object record.
 
 image:../../assets/images/veevavault/veevavault-connector-create-object-records-output.png[image,width=296,height=163]
 
-*Note* : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Get Object Records
+=== Get Object Records
 
-The Get Object Records operation allows to retrieve object records detail using object metadata fields to build a VQL query dynamically and execute on vault to get Object details. Place For-Each/Splitter element after this Operation to fetch each object records (page) sequentially.
+The Get Object Records operation enables you to retrieve object records details using object metadata fields to build a VQL query dynamically and execute on vault to get Object details. Place For-Each/Splitter element after this Operation to fetch each object records (page) sequentially.
 
-Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
+This operation provides a paging mechanism based on Mule standard pagination. See link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Get Object Records Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-get-object-records.png[image,width=601,height=355]
 
 [cols=",",options="header",]
 |===
 |*Fields* |*Description*
-|*Vault Object* |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault objects list from vault. Select an object from the list to retrieve object records detail.
-|*Object Fields* (Optional) |Insert object fields as per business requirement and these fields will be used to build a VQL query to execute on vault.
-|*WHERE Clause* |Insert a https://developer.veevavault.com/vql/#introduction-to-vault-queries[VQL] WHERE clause (without using keyword WHERE) conditions as per business requirement and it will be appended to dynamically to build VQL query to execute on vault. *E.g study_country__v = ‘0SC000000000101’*
+|*Vault Object* |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault objects list from vault. Select an object from the list to retrieve object records detail.
+|*Object Fields* |(Optional) Insert object fields per your business requirements. These fields will be used to build a VQL query to execute on the vault.
+|*WHERE Clause* |Insert a https://developer.veevavault.com/vql/#introduction-to-vault-queries[VQL] +WHERE+ clause (without using keyword +WHERE+) conditions as per business requirement and it will be appended to dynamically to build VQL query to execute on vault. For example: +study_country__v = ‘0SC000000000101’+
 |*Fetch Size* |Provide number of records per page. Default is 1000.
 |*Batch Size* |Provide number of pages per batch. Default is 10.
 |*Input* |N/A
 |*Output* a|
-You can find the list of object records fields to refer to add into Object fields list. If object fields list is provided, then specified fields detail returns as output. Default would be list of all fields.
+The list of object records fields to add into the Object fields list. If the object fields list is provided, then the specified fields detail is returned as output. Default is a list of all fields.
 
 image:../../assets/images/veevavault/veevavault-connector-get-object-records-output.png[image,width=282,height=306]
 
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+
 |===
 
-==== Delete Object Records
+=== Delete Object Records
 
-The Delete Object Records operation allows to delete single or multiple object record(s) with bulk API using CSV or JSON format input metadata.
+The Delete Object Records operation enables you to delete single or multiple object records with the bulk API using CSV or JSON format input metadata.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Delete Object Records Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-object-records.png[image,width=601,height=112]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Object Name* |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault object list. Select the object name from the list to delete object records for selected object.
+|*Object Name* |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault object list. Select the object name from the list to delete object records for the selected object.
 |*Metadata Format* |Select CSV or JSON option to accept document metadata in specified format.
-|*Object Metadata* |Object fields payload with required metadata either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
+|*Object Metadata* |Object fields payload with required metadata either in CSV or JSON format. Make sure payload is in the same format specified in the *Metadata Format* field.
 |*Input* a|
-You can find following list of object metadata required to delete object records.
+List of object metadata required to delete object records:
 
 image:../../assets/images/veevavault/veevavault-connector-delete-object-records-input.png[image,width=300,height=70]
 
 |*Output* a|
-You can find operation output or response retrieved from vault for an object records deleted.
+Operation output or response retrieved from vault for an object records deleted:
 
 image:../../assets/images/veevavault/veevavault-connector-delete-object-records-output.png[image,width=303,height=110]
 
-*Note* : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Update Object Records
+=== Update Object Records
 
-The Update Object Records operation allows to update object records of specified vault object.
+The Update Object Records operation enables you to update object records of specified vault object.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Update Object Records Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-object-records.png[image,width=601,height=112]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Object Name* |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault object list. Select the object name from the list to update object records of vault object.
+|*Object Name* |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve vault object list. Select the object name from the list to update the object records.
 |*Metadata Format* |Select CSV or JSON option to accept object metadata in specified format.
-|*Object Metadata* |Object fields payload with required metadata either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
+|*Object Metadata* |Object fields payload with the required metadata in CSV or JSON format. Make sure the payload is in the same format that is specified in the Metadata Format field.
 |*Input* a|
-You can find following list of object metadata required to create object records.
+List of object metadata required to create object records:
 
 image:../../assets/images/veevavault/veevavault-connector-update-object-records-input.png[image,width=283,height=346]
 
 |*Output* a|
-You can find object status of an object updated as an output or response retrieved from vault under output tab of operation.
+Object status of an object updated as an output or response retrieved from the vault is under the Output tab of the operation.
 
 image:../../assets/images/veevavault/veevavault-connector-update-object-records-output.png[image,width=281,height=112]
 
-*Note* : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Query
+=== Query
 
-The Query Operation allows to execute specified VQL query on Vault and retrieve result in paginated data input stream. Place For-Each/Splitter after Query Operation to fetch each record in sequence order. Note - Do not specify LIMIT and OFFSET in VQL query. These parameters are incorporated internally.
+The Query operation enables you to execute the specified VQL query on the vault and retrieve the result in a paginated data input stream.  Place +For-Each/Splitter+ after Query Operation to fetch each record in sequence order. 
 
-Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
+Note: Do not specify +LIMIT+ and +OFFSET+ in VQL query. These parameters are incorporated internally.
 
-*Configurations:*
+This operation provides a paging mechanism based on Mule standard pagination. See link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
 
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Query Configuration:*
 
 image:../../assets/images/veevavault/veevavault-connector-query.png[image,width=595,height=355]
 
@@ -521,10 +461,10 @@ image:../../assets/images/veevavault/veevavault-connector-query.png[image,width=
 |*VQL Query* a|
 Enter https://developer.veevavault.com/vql/#introduction-to-vault-queries[VQL] query to send it to Vault.
 
-*Note -- Do not specify LIMIT and OFFSET in VQL query.*
+*Note:* Do not specify LIMIT and OFFSET in VQL query.
 
 |*Input Parameters* a|
-The input parameters are to pass parameter(s) to VQL query dynamically. The parameters should be name-value pair, payload or variables value can be pass. Eg.
+The input parameters pass parameters to a VQL query dynamically. The parameters must be a name-value pair. Payload or variable values can be passed; for example:
 
 ____
 #[
@@ -540,7 +480,7 @@ Default parameter is *#[{}].*
 |*Batch Size* |Provide number of pages per batch. Default is 10.
 |*Input* |N/A
 |*Output* a|
-You can find the specified VQL query fields in output tab of operation. It returns specified VQL query result contains pagination data.
+You can find the specified VQL query fields in the Output tab of the operation. It returns the specified VQL query and the result contains pagination data.
 
 image:../../assets/images/veevavault/veevavault-connector-query-output.png[image,width=305,height=145]
 
@@ -550,35 +490,27 @@ image:../../assets/images/veevavault/veevavault-connector-query-output.png[image
 
 The Query operation is used to retrieve documents, object, workflow information from the Vault. The primary concept of this operation is to supply a VQL query and use DataWeave to supply the parameters:
 
-In the above example, input parameters are supplied as key-value pairs, which you can create by embedding a DataWeave script. Those keys are used in conjunction with the semicolon character (:) to reference a parameter value by name. This is the recommended approach for using parameters in your VQL query.
+In the previous example, input parameters are supplied as key-value pairs, which you can create by embedding a DataWeave script. Those keys are used in conjunction with the semicolon character (:) to reference a parameter value by name. This is the recommended approach for using parameters in your VQL query.
 
 The alternative is to directly write ` *<veevavault:vql>SELECT id, name__v, study__v FROM documents WHERE name__v = #[payload] </veevavault:vql>`*, but this is a very dangerous practice that is not recommended.
 
-*Advantages of using input parameters to configure the WHERE clause in a SELECT statement this way:*
+The following are the advantages of using input parameters to configure the +WHERE+ clause in a +SELECT+ statement:
 
 * The query becomes immune to VQL injection attacks.
 * The connector can perform optimizations that are not possible otherwise, which improves the app’s overall performance.
 
-==== Get Picklists
+=== Get Picklists
 
-The Get Picklists operation allows to retrieve all available picklist values configured on a picklist.
+The Get Picklists operation enables you to retrieve all available picklist values configured on a picklist.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Get Picklists Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-get-picklists.png[image,width=601,height=60]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Picklist Name* (Optional) |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve picklists from vault. Select a picklist name from the list to retrieve picklist values.
+|*Picklist Name* (Optional) |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve picklists from vault. Select a picklist name from the list to retrieve picklist values.
 |*Input* |N/A
 |*Output* a|
 You can find picklist values with name and label as an output of Get Picklists operation.
@@ -587,113 +519,89 @@ image:../../assets/images/veevavault/veevavault-connector-get-picklists-output.p
 
 |===
 
-==== Get Audit Details
+=== Get Audit Details
 
-The Get Audit Detail operation allows to retrieve audit details for specified audit type.
+The Get Audit Detail operation enables you to retrieve audit details for the specified audit type. This operation provides a paging mechanism based on Mule standard pagination. See link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
 
-Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
-
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Get Audit Details Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-get-audit-details.png[image,width=600,height=179]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Audit Type* |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve audit types from vault. Select an audit type from the list whose audit details need to retrieve.
-|*Start date* |Optional, specify start date to retrieve audit information. This date cannot be more than 30 days ago. Dates must be YYYY-MM-DDTHH:MM:SSZ format. Dates and times are in UTC. If time is not specified, it will default to midnight (T00:00:00Z) on the specified date.
-|*End date* |Optional, specify end date to retrieve audit information. This date cannot be more than 30 days ago. Dates must be YYYY-MM- DDTHH:MM:SSZ format. Dates and times are in UTC. If time is not specified, it will default to midnight (T00:00:00Z) on the specified date.
+|*Audit Type* |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve audit types from vault. Select an audit type from the list whose audit details you need to retrieve.
+|*Start date* |(Optional) Specify start date to retrieve audit information. This date cannot be more than 30 days ago. Dates must be YYYY-MM-DDTHH:MM:SSZ format. Dates and times are in UTC. If a time is not specified, it defaults to midnight (T00:00:00Z) on the specified date.
+|*End date* |(Optional) Specify start date to retrieve audit information. This date cannot be more than 30 days ago. Dates must be YYYY-MM-DDTHH:MM:SSZ format. Dates and times are in UTC. If a time is not specified, it defaults to midnight (T00:00:00Z) on the specified date.
 |*Fetch Size* |Provide number of records per page. Default is 1000.
 |*Batch Size* |Provide number of pages per batch. Default is 10.
 |*Input* |N/A
 |*Output* a|
-The following selected audit type details retrieved from vault in pagination format. Make sure to use For each / Splitter to fetch each record.
+The following selected audit type details are retrieved from the vault in pagination format. Make sure to use a +For Each/Splitter+ element to fetch each record.
 
 image:../../assets/images/veevavault/veevavault-connector-get-audit-details-output.png[image,width=282,height=232]
 
 |===
 
-==== Spark Validator
+=== Spark Validator
 
 The Spark Validator operation validates and verify spark message triggered from Vault with signature and public key. On successful validation and verification, the Spark message can be process further in Mule Flow as per business requirements. You can refer to https://developer.veevavault.com/sdk/#spark-messaging[Spark Messaging feature and functionalities] and setup for more details.
 
 The output of Spark Validator operation is Spark attributes (optional) with Spark Message as it is received from Vault.
 
-*Note* – Before triggering a Spark message from the Vault make sure to raise a support ticket with Veeva Support to increase the Message Queue Request Timeout to 15 seconds. By default, it is configured as 5 seconds, which is less than the time required for Spark Validator to complete message validation and verification.
+*Note:* Before triggering a Spark message from the Vault make sure to raise a support ticket with Veeva Support to increase the Message Queue Request Timeout to 15 seconds. By default, it is configured as 5 seconds, which is less than the time required for Spark Validator to complete message validation and verification.
 
-*Note* – As per Veeva Systems the public key (00001.pem) expires every two years. The customer gets notification well advanced about its expiry date, if you are using this operation in Mule application flow make sure that after public key expiration date you need to remove public key file from the path configured in field (Public Key Path) and it will create new public key file while execution. Otherwise Spark message verification would be failing as *INVALID_SPARK_MESSAGE*. The Mule application deployed on Cloudhub with default path need to restart for successful Spark Message verification.
+*Note:* As per Veeva Systems the public key (00001.pem) expires every two years. You receive notification in advance advising you of the expiration date. If you are using this operation in a Mule application flow, after the public key expiration date you need to remove the public key file from the path configured in the *Public Key Path* field. A new public key will be created during execution of the key removal. If you don’t do this, Spark message verification fails as *INVALID_SPARK_MESSAGE*. The Mule application deployed on Cloudhub with the default path must be restarted for successful Spark Message verification.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Spark Validator Configuration:*
 
 image:../../assets/images/veevavault/veevavault-connector-spark-validator.png[image,width=600,height=195]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Include Spark Header*|Flag to include Spark headers received from Vault into Spark Validator output. Default is FALSE.
-|*Public Key Path*|The path where public key (00001.pem) file get saved and will be used for verifying incoming Spark message with Signature. Default is *“${mule.home}/apps/${app.name}/publickeys”*
-|*Spark Headers*|The Spark headers received from the Vault. Default is *#[attributes.headers]*
-|*Spark Message*|The Spark message body received from the Vault. Default is *#[payload]*.
-|*Input*|You can find the following inputs required for Spark Validator.
+|*Include Spark Header*|Flag to include Spark headers received from Vault into Spark Validator output. Default is +FALSE+.
+|*Public Key Path*|The path to where public key (00001.pem) file is saved that will be used for verifying incoming Spark message with a signature. Default is *“${mule.home}/apps/${app.name}/publickeys”*
+|*Spark Headers*|The Spark headers received from the vault. Default is *#[attributes.headers]*
+|*Spark Message*|The Spark message body received from the vault. Default is *#[payload]*.
+|*Input*|Inputs required for Spark Validator:
 
 image:../../assets/images/veevavault/veevavault-connector-spark-validator-input.png[image,width=285,height=330]
 
-|*Output*|You can find the following output returns from Spark Validator operation.
+|*Output*|Output returns from the Spark Validator operation:
 
 image:../../assets/images/veevavault/veevavault-connector-spark-validator-output.png[image,width=280,height=265]
 
 |===
 
-==== Invoke Rest API
+=== Invoke Rest API
 
-The Invoke Rest API operation allows to invoke Veeva Vault Rest APIs. The response returned is either in JSON or XML depends on header *Accept* value provided. By default it returns in JSON format.
+The Invoke Rest API operation enables you to invoke Veeva Vault Rest APIs. The response returned is either in JSON or XML format depends on header *Accept* value provided. By default it returns in JSON format.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-Follow the instructions mentioned in link:#configuration[*Connector Configuration*]
-
-*Operation Configuration:*
+==== Invoke Rest API Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api.png[image,width=852,height=600]
 
 [cols=",",options="header",]
 |===
 |*Field* |*Description*
-|*Method*|Select method to invoke Veeva Rest API from drop down list. Default is GET.
-|*Path*|URI path to invoke Veeva Rest API. E.g: */objects/documents/{doc_id}*
+|*Method*|Select method to invoke Veeva Rest API from drop down list. Default is *GET*.
+|*Path*|URI path to invoke Veeva Rest API. For example: */objects/documents/{doc_id}*
 |*Body*|Body to send with a request to invoke Veeva Rest API. Default is *#[payload]*.
-|*Headers*|Headers in key-value format to send along with request, if there are no headers required in a request keep it empty. Default is *Empty list*.
-|*URI Parameters*|URI Parameters in key-value format to resolve value in a path, if there are no URI parameters in a path keep it empty. Default is an *Empty List*.
-|*Query Parameters*|Query Parameters in key-value format to send along with request, if there are no query parameters required in a request keep it empty. Default is *Empty list*.
+|*Headers*|Headers in key-value format to send along with request, if there are no headers required in a request keep empty. Default is an *Empty list*.
+|*URI Parameters*|URI Parameters in key-value format to resolve value in a path, if there are no URI parameters in a path keep empty. Default is an *Empty List*.
+|*Query Parameters*|Query Parameters in key-value format to send along with request, if there are no query parameters required in a request keep empty. Default is an *Empty list*.
 |*Request Streaming Mode*|Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
 |*Input*|N/A
-|*Output*|Response will be in JSON/XML depends on header *Accept* value provided in Headers section. By default it is JSON format.
+|*Output*|Response will be in JSON or XML format depends on header *Accept* value provided in *Headers* section. By default is JSON format.
 
 |===
 
 === Connector Operations SUCCESS and FAILURE response
 
-The Veeva Vault Connector operation responses are based on the Veeva API success or failure response with an error. The connector returns SUCCESS response at HIGH LEVEL and SUCCESS or FAILURE at LOW LEVEL (it means connector operation is SUCCESS but some to documents/object records failed to create/update due to some irrelevant metadata pass in request. For e.g.:
+The Veeva Vault Connector operation responses are based on the Veeva API success or failure response with an error. The connector returns SUCCESS response at HIGH LEVEL and SUCCESS or FAILURE at LOW LEVEL.This means the connector operation is successful but some document or object records failed to create or update due to some irrelevant metadata being passed in the request.
+
+=== Examples
 
 * *SUCCESS with SUCCESS response*
 --------------------
@@ -753,7 +661,7 @@ The Veeva Vault Connector operation responses are based on the Veeva API success
 }
 --------------------
 
-The Veeva Vault operations throw an exception when Veeva APIs returns a FAILURE response. E.g:
+The Veeva Vault operations throw an exception when Veeva APIs returns a FAILURE response. For example:
 
 * *FAILURE with an ERROR response*
 --------------------
@@ -767,7 +675,7 @@ The Veeva Vault operations throw an exception when Veeva APIs returns a FAILURE 
 	]
 }
 --------------------
-On receiving above FAILURE response from Veeva APIs, the connector operations will throw an exception, which needs to be caught in Error Handling component within Mule flow. E.g.:
+On receiving above FAILURE response from Veeva APIs, the connector operations throw an exception, which needs to be caught in *Error Handling* component within Mule flow; for example:
 
 --------------------
 **********************************************************************************
@@ -778,7 +686,7 @@ Error type : VEEVAVAULT:INVALID_DATA
 **********************************************************************************
 --------------------
 
-Following are the Error codes that can be caught in Error Handling component
+The following are the error codes that are caught in the Error Handling component:
 
 * VEEVAVAULT:API_LIMIT_EXCEEDED
 * VEEVAVAULT:ATTRIBUTE_NOT_SUPPORTED
@@ -794,21 +702,26 @@ Following are the Error codes that can be caught in Error Handling component
 
 === Streaming and Pagination
 
-All the operations (except Download Document) in connector returns an InputStream as payload with respective results based on operation output. Because of an InputStream is returned as payload Mule by default applies Streaming Strategies, please refer to https://docs.mulesoft.com/mule-runtime/4.2/streaming-about[Mule Streaming Strategies] in more details. You can find streaming strategies configuration in *Advanced* tab of connector operations.
+All the operations in the connector return an InputStream as a payload with respective results based on operation output. Because of this, by default, Mule applies Streaming Strategies. See https://docs.mulesoft.com/mule-runtime/4.2/streaming-about[Mule Streaming Strategies] for more details. The streaming strategies configuration fields are in the *Advanced* tab of the connector operations.
 
 image:../../assets/images/veevavault/veevavault-connector-streaming-pagination.png[image,width=601,height=124]
 
-The following operations in connector provides pagination mechanism based on Mule standard pagination.
+The following operations in the connector provide a pagination mechanism based on Mule standard pagination.
 
 * link:#get-documents[*Get Documents*]
 * link:#get-object-records[*Get Object Records*]
 * link:#query[*Query*]
 * link:#get-audit-details[*Get Audit Details*]
 
-While using these above paginated operations make sure to place For-Each/Splitter to retrieve each object (metadata’s in JSON format) at a time. The pagination operations have fields – *Fetch Size and Batch Size.*
+While using these above paginated operations make sure to place +For-Each/Splitter+ to retrieve each object (metadata’s in JSON format) at a time. The pagination operations have *Fetch Size* and *Batch Size.*
 
-* *Fetch Size:* The Fetch Size is a limit number of records that can be retrieve in a page. The operation would return the pages with fetch size number of JSON object records. Note, in some cases, Veeva API’s auto-calculate fetch size (number of records on each page) based on record size accumulated exceed the standard record size. The operation will return calculated records on each page.
-* *Batch Size:* The Batch Size is number of pages it would return in each batch and each page will have fetch size number of records. The operation would return number of records (metadata’s in JSON format) per batch is calculated as below, *e.g*.:
+* *Fetch Size:* 
+The Fetch Size is a limit number of records that can be retrieve in a single page. The operation returns the pages with the fetch size number of JSON object records. 
+
+In some cases, Veeva APIs auto-calculate the fetch size (number of records on each page) based on record size and the calculation exceeds the standard record size. The operation returns calculated records on each page.
+
+* *Batch Size:* 
+The Batch Size is the number of pages to return in each batch and each page will have the fetch size number of records. The operation returns a number of records (metadata in JSON format) per batch, and is calculated like in the following example:
 --------------------
 Fetch Size set as *1000*
 Batch Size set as *10*
@@ -830,9 +743,9 @@ Number of Records per batch = Number of pages per batch * Fetch Size
 Therefore, Number of records return per batch would be 10,000 records.
 --------------------
 
-The repeatable streams measure the buffer size in byte measurements, when handling objects the runtime measures the buffer size using instance counts.
+The repeatable streams measure the buffer size in byte measurements. When handling objects the runtime measures the buffer size using instance counts.
 
-In non-repeatable stream connector operation would returns stream as number of records per batch and in repeatable stream would returns all records in once, so when calculating the in-memory buffer size for repeatable auto-paging, you need to estimate how much memory space each instance takes to avoid running out of memory.		
+In non-repeatable streams connector operations return streams as the number of records per batch. Repeatable streams return all records at once, so when calculating the in-memory buffer size for repeatable auto-paging, you need to estimate how much memory space each instance takes to avoid running out of memory.		
 
 == Next Step
 
