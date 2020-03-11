@@ -4,9 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../assets/images/
 
-=== Use the Connector in a Mule Flow:
 
-Following are the list of operations with the connector and its configurations:
+Veeva Vault Connector supports the following operations and configurations:
 
 *Documents*
 
@@ -49,17 +48,17 @@ Following are the list of operations with the connector and its configurations:
 
 * link:#invoke-rest-api[*Invoke Rest API*]
 
-==== Connector Configuration
+=== Connector Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
 
-*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
+*Follow the instructions in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
 
-==== Create Documents
+=== Create Documents
 
-The Create Documents operation allows to create single or multiple document(s) with provided document metadata in CSV or JSON format. Make sure you have uploaded document files on Vault FTP server location for document content to attach with created documents.
+The Create Documents operation enables you to create single or multiple document(s) with provided document metadata in CSV or JSON format. Make sure you have uploaded document files on Vault FTP server location for document content to attach with created documents.
 
-=== Create Documents Configuration
+==== Create Documents Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-create-documents.png[image,width=601,height=90]
 
@@ -69,70 +68,54 @@ image:../../assets/images/veevavault/veevavault-connector-create-documents.png[i
 |Metadata Format |Select CSV or JSON option to accept document metadata in specified format.
 |Document Metadata |Document Metadata payload with required metadata either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
 |Input a|
-You can find following list of document metadata required to create document(s) on vault. Make sure payload should have mandatory metadata as per vault.
+The following shows the document metadata required to create documents on vault. Ensure payload has mandatory metadata for the vault.
 
 image:../../assets/images/veevavault/veevavault-connector-create-documents-input.png[image,width=283,height=326]
 
 |Output a|
-You can find create documents operation output status or response from vault.
+The Create Documents operation output status or response from the vault.
 
 image:../../assets/images/veevavault/veevavault-connector-create-documents-output.png[image,width=297,height=213]
 
-Note : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
+Note : Check the Success and Failure response status of operations link:#connector-operations-success-and-failure-response[*Connector Operations SUCCESS and FAILURE Response*].
 
 |===
 
-==== Get Documents
+=== Get Documents
 
-The Get Documents operation allows to retrieve document details based on document type, subtype and classification selected. Using selected type, subtype and classification it fetches document properties metadata and builds VQL queries dynamically. The VQL query is then executed on Vault to retrieve document details. Place For-Each/Splitter element after this Operation to fetch each document data (page) sequentially.
+The Get Documents operation enables you to retrieve document details based on document type, subtype and classification selected. Using selected type, subtype and classification it fetches document properties metadata and builds VQL queries dynamically. The VQL query is then executed on Vault to retrieve document details. Place For-Each/Splitter element after this Operation to fetch each document data (page) sequentially.
 
-Note – The output of the operation would be in pagination mechanism, please refer to link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
+This operation provides a paging mechanism based on Mule standard pagination. See link:#streaming-and-pagination[*Streaming and Pagination*] for more details.
 
-The document type, subtype and classification are optional, if none are selected then document properties metadata are fetched using API *(/api/\{version}/metadata/objects/documents/properties)* and VQL Query is built based on document metadata properties added/inserted in Document Properties list, if metadata properties are not provided then all queryable document properties is used in VQL and executed.
+The document type, subtype and classification are optional, if none are selected then document properties metadata are fetched using API *(/api/\{version}/metadata/objects/documents/properties)* and VQL Query is built based on document metadata properties added or inserted in *Document Properties* list, if metadata properties are not provided then all queryable document properties is used in VQL and executed.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
-
-*Operation Configuration:*
+==== Get Documents Configurations
 
 image:../../assets/images/veevavault/veevavault-connector-get-documents.png[image,width=601,height=355]
 
 [cols=",",options="header",]
 |===
 |Fields |Description
-|Type (Optional) |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve Document Types from vault. Select a document type from the list to retrieve document properties.
-|Subtype (Optional) |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve Document Subtypes from vault. Select a document subtype from the list to retrieve document properties.
-|Classification (Optional) |Click on icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve Document Classification from vault. Select a document classification from the list to retrieve document properties.
+|Type (Optional) |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve Document Types from the vault. Select a document type from the list to retrieve document properties.
+|Subtype (Optional) |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve Document Subtypes from the vault. Select a document subtype from the list to retrieve document properties.
+|Classification (Optional) |Click the refresh icon image:../../assets/images/veevavault/veevavault-connector-refresh-icon.png[image,width=22,height=22] to retrieve Document Classification from the vault. Select a document classification from the list to retrieve document properties.
 |Document Properties (Optional) |Insert document properties as per business requirement and these properties will be used to build a VQL query to execute on vault.
 |WHERE Clause |Insert a https://developer.veevavault.com/vql/#introduction-to-vault-queries[VQL] WHERE clause (without using keyword WHERE) conditions as per business requirement and it will be appended to dynamically to build VQL query to execute on vault. *E.g classification__v = ‘study_set_up_worksheet__c’*
 |Fetch Size |Provide number of records per page. Default is 1000.
 |Batch Size |Provide number of pages per batch. Default is 10.
 |Input |N/A
 |Output a|
-You can find list of queryable document properties retrieved from vault. If document properties list is provided, then specified properties detail would retrieve and result in operation output. Default would be list of all queryable properties.
+You can find list of queryable document properties retrieved from the vault. If document properties list is provided, then specified properties detail is retrieve and result in operation output. Default is a list of all queryable properties.
 
 image:../../assets/images/veevavault/veevavault-connector-get-documents-output.png[image,width=288,height=313]
 
 |===
 
-==== Delete Documents
+=== Delete Documents
 
-The Delete Documents operation allows to delete document single or multiple document(s) with bulk API using CSV or JSON format input metadata.
+The Delete Documents operation enables you to delete single or multiple documents using the bulk API with input metadata in CSV or JSON format.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
-
-*Operation Configuration:*
+==== Delete Documents Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-delete-documents.png[image,width=601,height=90]
 
@@ -140,34 +123,26 @@ image:../../assets/images/veevavault/veevavault-connector-delete-documents.png[i
 |===
 |Field |Description
 |Metadata Format |Select CSV or JSON option to accept document metadata in specified format.
-|Document Metadata |Document Metadata payload with required metadata either in CSV or JSON format.
+|Document Metadata |Document Metadata payload with required metadata in CSV or JSON format (same as the specified value in *Metadata Format*).
 |Input a|
-You can find following list of document metadata required to delete document(s) on vault.
+The following shows the list of document metadata that’s required to delete documents on the vault.
 
 image:../../assets/images/veevavault/veevavault-connector-delete-documents-input.png[image,width=301,height=55]
 
 |Output a|
-You can find delete documents operation output status or response from vault.
+The delete documents operation output status or response from vault:
 
 image:../../assets/images/veevavault/veevavault-connector-delete-documents-output.png[image,width=300,height=147]
 
-*Note : It’s important to check response status of Success and Failure of operation in section link:#connector-operations-success-and-failure-response[Connector Operations SUCCESS and FAILURE Response].*
+Note : Check the Success and Failure response status of operations in link:#connector-operations-success-and-failure-response[Connector Operations SUCCESS and FAILURE Response].*
 
 |===
 
-==== Update Documents
+=== Update Documents
 
-The Update Documents operation allows to update bulk document(s) with provided editable metadata in payload either in CSV or JSON format.
+The Update Documents operation enables you to update bulk documents with the provided editable metadata in the payload in CSV or JSON format.
 
-*Configurations:*
-
-*Connector Configuration:*
-
-image:../../assets/images/veevavault/veevavault-connector-basic-configuration.png[image,width=601,height=54]
-
-*Follow the instructions mentioned in link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration]*
-
-*Operation Configuration:*
+==== Update Documents Configuration
 
 image:../../assets/images/veevavault/veevavault-connector-update-documents.png[image,width=601,height=95]
 
@@ -175,14 +150,14 @@ image:../../assets/images/veevavault/veevavault-connector-update-documents.png[i
 |===
 |Field |Description
 |Metadata Format |Select CSV or JSON option to accept document metadata in specified format.
-|Document Metadata |Document Metadata payload with required editable metadata either in CSV or JSON format. Make sure payload would be in format as specified in Metadata format field.
+|Document Metadata |Document metadata payload with the required editable metadata in CSV or JSON format. The payload should be in the format specified in the Metadata Format field.
 |Input a|
-You can find following list of editable document metadata to update document(s) on vault. Make sure payload should have only editable metadata as per vault.
+The following is the list of editable document metadata to update documents on the vault. The payload should have only the editable metadata for that vault.
 
 image:../../assets/images/veevavault/veevavault-connector-update-documents-input.png[image,width=286,height=343]
 
 |Output a|
-You can find create documents operation output status or response from vault.
+Update documents operation output status or response from the vault.
 
 image:../../assets/images/veevavault/veevavault-connector-update-documents-output.png[image,width=303,height=148]
 
@@ -190,9 +165,11 @@ image:../../assets/images/veevavault/veevavault-connector-update-documents-outpu
 
 ==== Export Documents
 
-An Export Documents operation allows to query a set of documents for export to your vault’s FTP Staging server. It is recommended to use Export Documents operation is separate asynchronous flow using Async Scope and passing payload with document ids. Using asynchronously the operation executes in separate flow thread, will wait for specified polling interval to poll the Job status until it gets successful while the main flow continues its process.
+An Export Documents operation enables you to query a set of documents for export to your vault’s FTP staging server. It is recommended to use Export Documents operation is separate asynchronous flow using Async Scope and passing payload with document ids. Using asynchronously the operation executes in separate flow thread, will wait for specified polling interval to poll the Job status until it gets successful while the main flow continues its process.
 
-The exported documents are stored on FTP Staging area in folder hierarchy structure – *\{root}/\{userId}/\{jobId}/\{documentIds}/\{versions}*. The Export Documents operation will return job results as response. For example:
+The exported documents are stored on FTP Staging area in folder, with the hierarchy structure: *\{root}/\{userId}/\{jobId}/\{documentIds}/\{versions}*. 
+
+The following is an example of the Export Documents operation returning job results as response:
 --------------------
 [
   {
@@ -222,17 +199,22 @@ The exported documents are stored on FTP Staging area in folder hierarchy struct
 ]
 --------------------
 
-The above example shows attributes as under :
+The previous example shows the following attributes:
  
-*file – "/{jobId}/{documentId}/{major-minor-version}/{filename}"*. It’s an absolute file path location on Vault FTP server staging area.
+- file 
+Has the format: +"/{jobId}/{documentId}/{major-minor-version}/{filename}"+ which is the absolute file path location on the Vault FTP server staging area.
  
-*user_id__v* –  It’s a Vault system user Id of an user whose credentials are configured in connector. The folder is created in the name of user Id prefix with *‘u’ (e.g: uXXXXXXX)* on Vault FTP server staging area root location and under which exported file is located – *(e.g: "/uXXXXXXX/{jobId}/{documentId}/{major-minor-version}/{filename}\)"*.
+- user_id__v
+Vault system user ID of a user whose credentials are configured in the connector. The folder is created on the Vault FTP server staging area root location under where the exported file is located. The folder is created with the name of the user ID prefixed with the letter +‘u’+; for example: +"/uXXXXXXX/{jobId}/{documentId}/{major-minor-version}/{filename}\)"+.
 
-*id* – It’s a document Id of exported document file.
+- id
+Document ID of the exported document file.
 
-*major_version_number__v* – It’s a major version number of exported document file.
+- major_version_number__v
+Major version number of the exported document file
 
-*minor_version_number__v* – It’s a minor version number of exported document file.
+- minor_version_number__v 
+Minor version number of the exported document file
 
 
 *Configurations:*
