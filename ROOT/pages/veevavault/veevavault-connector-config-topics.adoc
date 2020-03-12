@@ -620,6 +620,81 @@ You configure a URI parameter when you want to use a placeholder, such as /objec
 ==== Query Parameters
 In General > Request > Query Parameters, click the plus icon (+) to add a parameter to a request. Type a name and value for the parameter or use a DataWeave expression to define the name and value.
 
+==== Sending Form Parameters in a POST Request
+
+To send parameters in a POST request, In General > Request, select the POST method. In Body, construct the payload of the Mule message. Following is an examples:
+
+. For *application/x-www-form-urlencoded* with the names and the values of the parameters to send.
+
+----
+#[output application/x-www-form-urlencoded --- {'key1':'value1', 'key2':'value2'}]
+----
+
+. For *multipart/form-data* 
+In multipart/form-data, ensure the header *Content-Type* value contains boundry attribute with value same as dataweave output as shown, for example: *"multipart/form-data; boundary=abcdefg"*
+----
+	%dw 2.0
+	output multipart/form-data boundary='abcdefg'
+	---
+	{
+		parts: {
+			file: {
+				headers: {
+					"Content-Disposition": {
+						"name": "file",
+						"filename": attributes.fileName
+					},
+					"Content-Type": payload.^mimeType
+				},
+				content : payload
+			},
+			name__v: {
+				headers: {
+					
+				},
+				content: 'Test Document'
+			},
+			type__v: {
+				headers: {
+				
+				},
+				content: 'Trial Management'
+			},
+			subtype__v: {
+				headers: {
+
+				},
+				content: 'Meetings'
+			},
+			classification__v: {
+				headers: {
+
+				},
+				content: 'Kick-off Meeting Material'
+			},
+			lifecycle__v: {
+				headers: {
+					
+				},
+				content: 'Base Doc Lifecycle'
+			},
+			study__v: {
+				headers: {
+					
+				},
+				content: '0ST000000000301'
+			},	
+			comments__c: {
+				headers: {
+					
+				},
+				content: 'Test Document'
+			}						
+		}
+	}
+----
+
+
 === Connector Operations SUCCESS and FAILURE response
 
 The Veeva Vault Connector operation responses are based on the Veeva API success or failure response with an error. The connector returns SUCCESS response at HIGH LEVEL and SUCCESS or FAILURE at LOW LEVEL.This means the connector operation is successful but some document or object records failed to create or update due to some irrelevant metadata being passed in the request.
