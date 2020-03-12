@@ -816,3 +816,79 @@ link:#veevavault-connector-connection-config[Connection Configuration]
 * VEEVAVAULT:NO_PERMISSION
 * VEEVAVAULT:OPERATION_NOT_ALLOWED
 * VEEVAVAULT:PARAMETER_REQUIRED
+
+==== Invoke REST API
+
+Invoke REST API operation invokes Veeva Vault REST API and returns response in JSON or XML format depending on header *Accept* value provided. Default response is in JSON.
+
+*<veevavault:invoke-rest-api>*
+
+*Parameters:*
+
+[cols=",,,,",options="header",]
+|===
+|*Name* |*Type* |*Description* |*Default Value* |*Required*
+|Method |String a|
+The list of methods to invoke REST API. Default is *GET*.
+
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-method.png[image,width=419,height=91]
+
+|GET|X
+|Path |String | 
+The URI Path where request will be sent.
+
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-path.png[image,width=625,height=31]
+
+| |X
+|Body |Input Stream |
+The body of the request message send along with request except GET method request. Default is payload.
+
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-body.png[image,width=625,height=31]
+
+|#[payload] |
+|Headers |Map |
+Headers in key-value format to send along with request, if there are no headers required in a request keep empty. Default is an *Empty list*.
+
+image:../../assets/images/veevavault-connector-invoke-rest-api-headers.png[image,width=616,height=126]
+
+|#[payload] |
+|URI Parameters |Map |
+URI Parameters in key-value format to resolve value in a path, if there are no URI parameters in a path keep empty. Default is an *Empty List*.
+
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-uri-parameters[image,width=640,height=128]
+
+|#[payload] |
+|Query Parameters |Map |
+Query Parameters in key-value format to send along with request, if there are no query parameters required in a request keep empty. Default is an *Empty list*.
+
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-query-parameters.png[image,width=640,height=126]
+
+|#[payload] |
+|Request Streaming Mode | |
+Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
+
+* ALWAYS
+* AUTO
+* NEVER
+
+| |
+|===
+
+*For Configurations:*
+
+link:#veevavault-connector-connection-config[Connection Configuration]
+
+*Throws:*
+
+* VEEVAVAULT:API_LIMIT_EXCEEDED
+* VEEVAVAULT:ATTRIBUTE_NOT_SUPPORTED
+* VEEVAVAULT:INACTIVE_USER
+* VEEVAVAULT:INVALID_DATA
+* VEEVAVAULT:INVALID_DOCUMENT
+* VEEVAVAULT:INSUFFICIENT_ACCESS
+* VEEVAVAULT:MALFORMED_URL
+* VEEVAVAULT:METHOD_NOT_SUPPORTED
+* VEEVAVAULT:NO_PERMISSION
+* VEEVAVAULT:OPERATION_NOT_ALLOWED
+* VEEVAVAULT:PARAMETER_REQUIRED
+

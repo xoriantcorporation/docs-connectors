@@ -608,7 +608,6 @@ By default, the Invoke Rest API operation sends the Mule message payload as the 
 - Headers
 - Query parameters
 - URI parameters
-- A map of multiple headers or parameters
 
 ==== Headers
 
