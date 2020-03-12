@@ -68,7 +68,7 @@ To configure this connector:
 +
 . Click *OK*
 +
-. Select *1 - Basic Connection* from Connection list.
+. Select *1 - Basic Connection* from Connection list. See link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration] for "*2 - OAuth2 Connection*" configuration.
 +
 . In the Veeva Vault Config window, *General* tab.
 +

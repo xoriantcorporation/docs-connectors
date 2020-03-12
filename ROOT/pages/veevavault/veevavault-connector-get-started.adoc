@@ -23,7 +23,7 @@ The Veeva Vault Connector can be use in the Mule application as an outbound conn
 * Spark Validator: Validates and verifies the Spark message triggered from Vault with signature.
 * Invoke Rest API: Operation to invoke https://developer.veevavault.com/api/19.1/#documents[Veeva Vault Rest APIs.]
 
-You can configure the Veeva Vault Connector using Basic Authentication configuration with credentials to connect to a Veeva Vault instance and perform operations.
+You can configure the Veeva Vault Connector using Basic Authentication configuration with credentials or OAuth2 Authentication to connect to a Veeva Vault instance and perform operations.
 
 Release Notes: xref:release-notes::connector/veevavault-connector-release-notes.adoc[Veeva Vault Connector Release Notes] +
 Exchange: https://www.mulesoft.com/exchange/?search=veevavault&type=connector[Veeva Vault Connector]
