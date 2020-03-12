@@ -610,14 +610,14 @@ By default, the Invoke Rest API operation sends the Mule message payload as the 
 - URI parameters
 - A map of multiple headers or parameters
 
-====== Headers
+===== Headers
 
 In General > Request > Query Parameters, click the plus icon (+) to add headers to the request. For example, add header names *HeaderName1* and HeaderName2, add header values HeaderValue1 and HeaderValue2. You can use DataWeave expressions, for example #[{'HeaderName1' : 'HeaderValue1', 'HeaderName2' : 'HeaderValue2'}].
 
-====== URI Parameters
+===== URI Parameters
 You configure a URI parameter when you want to use a placeholder, such as /objects/documents/{doc_id}, in the path of your request. To configure a URI parameter, type the placeholder enclosed in curly brackets in the Path field. Select URI Parameters, click +, and enter a name and value.
 
-====== Query Parameters
+===== Query Parameters
 In General > Request > Query Parameters, click the plus icon (+) to add a parameter to a request. Type a name and value for the parameter or use a DataWeave expression to define the name and value.
 
 === Connector Operations SUCCESS and FAILURE response
