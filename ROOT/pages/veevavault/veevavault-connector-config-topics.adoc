@@ -597,6 +597,29 @@ image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api.png[im
 
 |===
 
+A typical use of the Invoke Rest API operation is to invoke Veeva Vault Rest API using the default GET method. By default, the GET methods do not send the payload in the request; the body of the HTTP request is empty. The other methods send the message payload as the body of your request.
+
+After sending a request, the connector receives the response either in JSON or XML format depends on header *Accept* value provided, otherwise default is JSON. The payload is then passed to the next element in your application’s flow.
+
+===== Add Parameters
+
+By default, the Invoke Rest API operation sends the Mule message payload as the request body but you can customize it using a DataWeave script or expression. In addition to the body of the request, you can configure:
+
+- Headers
+- Query parameters
+- URI parameters
+- A map of multiple headers or parameters
+
+====== Headers
+
+In General > Request > Query Parameters, click the plus icon (+) to add headers to the request. For example, add header names *HeaderName1* and HeaderName2, add header values HeaderValue1 and HeaderValue2. You can use DataWeave expressions, for example #[{'HeaderName1' : 'HeaderValue1', 'HeaderName2' : 'HeaderValue2'}].
+
+====== URI Parameters
+You configure a URI parameter when you want to use a placeholder, such as /objects/documents/{doc_id}, in the path of your request. To configure a URI parameter, type the placeholder enclosed in curly brackets in the Path field. Select URI Parameters, click +, and enter a name and value.
+
+====== Query Parameters
+In General > Request > Query Parameters, click the plus icon (+) to add a parameter to a request. Type a name and value for the parameter or use a DataWeave expression to define the name and value.
+
 === Connector Operations SUCCESS and FAILURE response
 
 The Veeva Vault Connector operation responses are based on the Veeva API success or failure response with an error. The connector returns SUCCESS response at HIGH LEVEL and SUCCESS or FAILURE at LOW LEVEL.This means the connector operation is successful but some document or object records failed to create or update due to some irrelevant metadata being passed in the request.
