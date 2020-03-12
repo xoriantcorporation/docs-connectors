@@ -863,12 +863,10 @@ image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-query-
 
 | |
 |Request Streaming Mode |Stream |
-Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
+.Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
 
 *ALWAYS
-
 *AUTO
-
 *NEVER
 
 | |
