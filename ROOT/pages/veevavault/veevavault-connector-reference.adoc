@@ -843,32 +843,32 @@ image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-path.p
 |Body |Input Stream |
 The body of the request message send along with request except GET method request. Default is payload.
 
-image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-body.png[image,width=625,height=31]
-
 |#[payload] |
 |Headers |Map |
 Headers in key-value format to send along with request, if there are no headers required in a request keep empty. Default is an *Empty list*.
 
 image:../../assets/images/veevavault-connector-invoke-rest-api-headers.png[image,width=616,height=126]
 
-|#[payload] |
+| |
 |URI Parameters |Map |
 URI Parameters in key-value format to resolve value in a path, if there are no URI parameters in a path keep empty. Default is an *Empty List*.
 
-image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-uri-parameters[image,width=640,height=128]
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-uri-parameters.png[image,width=640,height=128]
 
-|#[payload] |
+| |
 |Query Parameters |Map |
 Query Parameters in key-value format to send along with request, if there are no query parameters required in a request keep empty. Default is an *Empty list*.
 
 image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-query-parameters.png[image,width=640,height=126]
 
-|#[payload] |
-|Request Streaming Mode | |
+| |
+|Request Streaming Mode |Stream |
 Request to send in streaming mode, select option from drop down list. By default, if the type of the payload is a stream, streaming is used to send the request.
 
 * ALWAYS
+
 * AUTO
+
 * NEVER
 
 | |
