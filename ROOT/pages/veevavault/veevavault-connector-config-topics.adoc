@@ -625,11 +625,11 @@ In General > Request > Query Parameters, click the plus icon (+) to add a parame
 To send parameters in a POST request, In General > Request, select the POST method. In Body, construct the payload of the Mule message. Following is an examples:
 
 . For *application/x-www-form-urlencoded* with the names and the values of the parameters to send.
-
++
 ----
 #[output application/x-www-form-urlencoded --- {'key1':'value1', 'key2':'value2'}]
 ----
-
++
 . For *multipart/form-data* 
 In multipart/form-data, ensure the header *Content-Type* value contains boundry attribute with value same as dataweave output as shown, for example: *"multipart/form-data; boundary=abcdefg"*
 ----
@@ -693,7 +693,7 @@ In multipart/form-data, ensure the header *Content-Type* value contains boundry 
 		}
 	}
 ----
-
++
 
 === Connector Operations SUCCESS and FAILURE response
 
