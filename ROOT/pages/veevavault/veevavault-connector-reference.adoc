@@ -843,11 +843,11 @@ image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-path.p
 |Body |Input Stream |
 The body of the request message send along with request except GET method request. Default is payload.
 
-|#[payload] |
+|#[payload]  |
 |Headers |Map |
 Headers in key-value format to send along with request, if there are no headers required in a request keep empty. Default is an *Empty list*.
 
-image:../../assets/images/veevavault-connector-invoke-rest-api-headers.png[image,width=616,height=126]
+image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-headers.png[image,width=616,height=126]
 
 | |
 |URI Parameters |Map |
