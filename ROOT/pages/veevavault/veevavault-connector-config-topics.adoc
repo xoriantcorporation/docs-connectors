@@ -635,65 +635,65 @@ To send parameters in a POST request, In General > Request, select the POST meth
 In multipart/form-data, ensure the header *Content-Type* value contains boundry attribute with value same as dataweave output as shown, for example: *"multipart/form-data; boundary=abcdefg"*
 +
 ----
-	%dw 2.0
-	output multipart/form-data boundary='abcdefg'
-	---
-	{
-		parts: {
-			file: {
-				headers: {
-					"Content-Disposition": {
-						"name": "file",
-						"filename": attributes.fileName
-					},
-					"Content-Type": payload.^mimeType
+%dw 2.0
+output multipart/form-data boundary='abcdefg'
+---
+{
+	parts: {
+		file: {
+			headers: {
+				"Content-Disposition": {
+					"name": "file",
+					"filename": attributes.fileName
 				},
-				content : payload
+				"Content-Type": payload.^mimeType
 			},
-			name__v: {
-				headers: {
-					
-				},
-				content: 'Test Document'
-			},
-			type__v: {
-				headers: {
+			content : payload
+		},
+		name__v: {
+			headers: {
 				
-				},
-				content: 'Trial Management'
 			},
-			subtype__v: {
-				headers: {
+			content: 'Test Document'
+		},
+		type__v: {
+			headers: {
+			
+			},
+			content: 'Trial Management'
+		},
+		subtype__v: {
+			headers: {
 
-				},
-				content: 'Meetings'
 			},
-			classification__v: {
-				headers: {
+			content: 'Meetings'
+		},
+		classification__v: {
+			headers: {
 
-				},
-				content: 'Kick-off Meeting Material'
 			},
-			lifecycle__v: {
-				headers: {
-					
-				},
-				content: 'Base Doc Lifecycle'
+			content: 'Kick-off Meeting Material'
+		},
+		lifecycle__v: {
+			headers: {
+				
 			},
-			study__v: {
-				headers: {
-					
-				},
-				content: '0ST000000000301'
-			},	
-			comments__c: {
-				headers: {
-					
-				},
-				content: 'Test Document'
-			}						
-		}
+			content: 'Base Doc Lifecycle'
+		},
+		study__v: {
+			headers: {
+				
+			},
+			content: '0ST000000000301'
+		},	
+		comments__c: {
+			headers: {
+				
+			},
+			content: 'Test Document'
+		}						
 	}
+}
 ----
 
 
