@@ -633,6 +633,7 @@ To send parameters in a POST request, In General > Request, select the POST meth
 . For *multipart/form-data* 
 +
 In multipart/form-data, ensure the header *Content-Type* value contains boundry attribute with value same as dataweave output as shown, for example: *"multipart/form-data; boundary=abcdefg"*
++
 ----
 	%dw 2.0
 	output multipart/form-data boundary='abcdefg'
@@ -694,7 +695,7 @@ In multipart/form-data, ensure the header *Content-Type* value contains boundry 
 		}
 	}
 ----
-+
+
 
 === Connector Operations SUCCESS and FAILURE response
 
