@@ -40,7 +40,7 @@ The target component enables your app to process data received from the trigger.
 . Enter Configuration Name.
 . Click Add Connection and enter connection name.
 . In Connection Type, Select "*1 - Basic Connection*" or "*2 - OAuth2 Connection*".
-. Following is a configuration for *"1 - Basic Connection"*. For "*2 - OAuth2 Connection*" See link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration].
+. Following is a configuration for *"1 - Basic Connection"*. See link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration] for "*2 - OAuth2 Connection*" configuration.
 . In General tab, enter below required fields:
 +
 [cols=",,",options="header",]
