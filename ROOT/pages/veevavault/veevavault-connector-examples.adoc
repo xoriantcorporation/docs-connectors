@@ -313,7 +313,11 @@ To create Mule flow, follow these instructions:
 +
 	Method: POST,
 	Path: "/objects/documents", 
-	Headers: "Accept" as key and "application/json" as value,
+	Headers: 
+		Key: "Accept"
+		Value: "application/json"
+		Key: "Content-Type"
+		Value: "multipart/form-data; boundary=abcdefg"
 	URI Parameters: Leave it empty.
 	Query Parameters: Leave it empty.
 +	
