@@ -350,7 +350,7 @@ To create Mule flow, follow these instructions:
 +
 	Note: You can configure above parameters as per your requirement to invoke Vault REST API.
 +	
-* Drag Logger element to log information in console or log file.
+* Drag Logger to log payload with below message.
 
 --------------------
 	Invoke Veeva API response :: #[payload]
