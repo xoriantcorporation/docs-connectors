@@ -337,7 +337,6 @@ To create Mule flow, follow these instructions:
 	Query Parameters: Leave it empty.
 +	
 	Body:
-+
 ---
 	%dw 2.0
 	output application/x-www-form-urlencoded
