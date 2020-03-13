@@ -33,7 +33,7 @@ Flow Designer automatically saves all changes.
 |===
 |*Connection Type* |*Veeva Vault Information Site*
 |link:#configure-basic-username-password-connection[*Basic Connection*] |http://vaulthelp2.vod309.com/wordpress/admin-user-help/users/creating-and-managing-users/[Creating and Managing Users]
-|link:#configure-oauth2-connection[OAuth2 Connection |http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles]
+|link:#configure-oauth2-connection[OAuth2 Connection] |http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles]
 |===
 
 == Configure the Target Component
