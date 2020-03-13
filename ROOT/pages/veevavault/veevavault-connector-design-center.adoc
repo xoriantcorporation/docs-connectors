@@ -27,6 +27,15 @@ For information on Flow Designer field values, see the xref:./veevavault-connect
 
 Flow Designer automatically saves all changes.
 
+== Configure a Connection Type
+
+[cols=",",options="header",]
+|===
+|*Connection Type* |*Veeva Vault Information Site*
+|link:#configure-basic-username-password-connection[*Basic Connection*] |http://vaulthelp2.vod309.com/wordpress/admin-user-help/users/creating-and-managing-users/[Creating and Managing Users]
+|link:#configure-oauth-connection[OAuth2 Connection |http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles]
+|===
+
 == Configure the Target Component
 
 The target component enables your app to process data received from the trigger. VeevaVault Connector provides operations that help you integrate VeevaVault with third party applications and services. For example, this integration enables you to creates vault connectivity and retrieve picklists data from Vault, which can be further integrated or process.
@@ -56,6 +65,22 @@ The target component enables your app to process data received from the trigger.
 +
 . In Advanced tab, Select Burst API Limit Config and Daily API Limit Config.
 . Click the *Test* button to test the connection.
+
+== Configure Basic Username Password Connection`
+
+Important fields:
+
+== Configure OAuth 2.0 Connection
+
+Important fields:
+
+* Display (required): How to optimize the display: Page = Full-page authorization screen (default), Popup = Compact dialog optimized for modern web browser popup windows, and Touch = Mobile-optimized dialog designed for modern smart phones, such as Android and iPhone.
+* Consumer Key (required): The consumer key for the Salesforce connected app. See Create a Consumer Key.
+* Consumer Secret (required): The consumer secret for the connector to access Salesforce.
+* Listener Config (required): Configuration for the listener, for example, HTTP_Listener_config.
+* Callback Path (required): Path for the callback, for example, /callback.
+* Authorize Path (required): Path for authorization, for example, /authorize.
+* External Callback URL: Callback URL, for example, http://localhost:8085/callback.
 
 == See Also
 
