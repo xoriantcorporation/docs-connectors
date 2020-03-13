@@ -32,7 +32,9 @@ April 2020
 
 ==== *Fixed Issues*
 
-* Export documents operation runs into infinite loop when invalid/deleted document id is passed. This has been fixed.
+This release contains the following fixed issues:
+
+* Export documents operation runs into infinite loop when invalid/deleted document id is passed.
 
 === *1.1.0*
 
