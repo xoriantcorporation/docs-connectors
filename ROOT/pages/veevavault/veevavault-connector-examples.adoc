@@ -310,13 +310,15 @@ To create Mule flow, follow these instructions:
 * Drag Invoke Rest API operation from Veeva Vault Connector palette.
 * Configure Veeva Vault connection configuration with username, password, vault Url, vault version, vault client Id.
 * Configure the following parameters
++
 	Method: POST,
 	Path: "/objects/documents", 
 	Headers: "Accept" as key and "application/json" as value,
 	URI Parameters: Leave it empty.
 	Query Parameters: Leave it empty.
-	
++	
 	Note: You can configure above parameters as per your requirement to invoke Vault REST API.
++	
 * Drag Logger element to log information in console or log file.
 
 
