@@ -6,101 +6,65 @@ endif::[]
 
 Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Select]
 
-Guide: xref:./veevavault-connector-get-started.adoc[VeevaVault Connector]
+Anypoint Connector for Veeva Vault (Veeva Vault) enables you to integrate the Veeva Vault platform with third party vendors using connector operations in a Mule flow. The connector performs CRUD (Create, Retrieve, Update, Delete), Query, and Export operations on the vault using Veeva Vault APIs.
 
-Reference: xref:./veevavault-connector-reference.adoc[VeevaVault Connector Reference]
+=== *1.2.0*
 
-*Version 1.2.0*
+April 2020
 
-*Release:* April 2020
+=== *Compatibility*
 
-*Compatibility*
+[cols=",",options="header",]
+|===
+|*App/Service* |*Version*
+|Mule |4.1 and later
+|Anypoint Studio |7.0 and later
+|JDK |1.8 and later 
+|Veeva Vault APIs |18.0 and later 
+|Apache Common Language |2.6 and later 
+|JSON libraries |20170516 and later 
+|===
 
-The Veeva Vault Connector supports these software versions:
+==== *New Features*
 
-*Minimum Versions:*
+* OAuth2 Authentication connection option is added in connector configuration.
+* Invoke Rest API operation added that enables to invoke Veeva Vault Rest APIs.
 
-* Anypoint Studio – 7.0.0 or higher
-* Mule Runtime – 4.1.0 or higher
-* JDK – 1.8.0 or higher
-* Veeva APIs – 18.0 or higher
-
-*Fixed in this Release:*
+==== *Fixed Issues*
 
 * Export documents operation runs into infinite loop when invalid/deleted document id is passed. This has been fixed.
-* New feature OAuth2 Authentication option is added in connector configuration.
-* New feature Invoke Rest API operation added that enables to invoke Veeva Vault Rest APIs.
 
-*Version 1.1.0*
+=== *1.1.0*
 
-*Release:* January 2020
+February 5 2020
 
-*Compatibility*
+==== *Compatibility*
 
-The Veeva Vault Connector supports these software versions:
+[cols=",",options="header",]
+|===
+|*App/Service* |*Version*
+|Mule |4.1 and later
+|Anypoint Studio |7.0 and later
+|JDK |1.8 and later 
+|Veeva Vault APIs |18.0 and later 
+|Apache Common Language |2.6 and later 
+|JSON libraries |20170516 and later 
+|===
 
-*Minimum Versions:*
+==== *New Features*
 
-* Anypoint Studio – 7.0.0 or higher
-* Mule Runtime – 4.1.0 or higher
-* JDK – 1.8.0 or higher
-* Veeva APIs – 18.0 or higher
+* The Spark Message Validator operation was implemented to validate and verify Spark messages with a public key and signature received from the vault.
 
-*Fixed in this Release:*
+==== *Fixed Issues*
+
+This release contains the following fixed issues:
 
 * Export Documents operation should return Job results instead of Job Status response.
 * Get Documents and Get Object Records operations throws an error when Document/Field properties list configured as empty or None.
-* Spark Message Validator operation implemented to validate and verify Spark message with public key and signature received from Vault. 
 
+=== *1.0.3*
 
-*Version 1.0.3*
+August 2019
 
-*Release:* August 2019
+This is a new release.
 
-This is initial release
-
-*Compatibility*
-
-The Veeva Vault Connector supports these software versions:
-
-*Minimum Versions:*
-
-* Anypoint Studio – 7.0.0 or higher
-* Mule Runtime – 4.1.0 or higher
-* JDK – 1.8.0 or higher
-* Veeva APIs – 18.0 or higher
-
-Third Party Libraries:
-
-* Apache Common Language – 2.6 or higher
-* JSON Libraries – 20170516 or higher
-
-*Features:*
-
-* The Veeva Vault Connector includes Basic Authentication using Username and Password at connector configuration level.
-* At connector configuration level it also provides an option to configure response timeout, Burst API Limit Exceed profile and Daily API Limit Exceed profile – to configure API Limit Threshold, API Wait Time and Time Unit, by default it enable.
-* The Veeva Vault Connector includes following operations to create, update, delete, retrieve vault documents, document renditions, objects. It also retrieves picklists and audit details, executes VQL query to extract document, object and workflows data from vault.
-
-* Create Document Renditions – The Create Document Renditions operation allows to add document renditions in bulk with provided document metadata.
-* Create Documents – The Create Documents operation allows to create single or multiple document(s) with provided document metadata in CSV or JSON format. and file(s) to upload.
-* Create Object Records - The Create Object Records operation allows to create bulk object records for selected vault object with provided object metadata in CSV or JSON format.
-* Delete Document Renditions – The Delete Document Renditions operation allows to delete document renditions in bulk using CSV or JSON format input metadata.
-* Delete Documents – The Delete Documents operation allows to delete document single or multiple document(s) with bulk API using CSV or JSON format input metadata.
-* Delete Object Records – The Delete Object Records operation allows to delete document single or multiple document(s) with bulk API using CSV or JSON format input metadata.
-* Export Documents – The Export Documents operation allows to query a set of documents for export to your vault’s FTP staging server. The operation exports the artefacts - Source documents, Renditions and All versions or latest version.
-* Get Audit Details – The Get Audit Details operation allows to retrieve audit details for specified audit type.
-* Get Document Renditions Types – The Get Document Renditions Types operation allows to retrieve document renditions detail.
-* Get Documents – The Get Documents operation allows to retrieve document details based on document type, subtype and classification selected. Using selected type, subtype and classification it fetches document properties metadata and built VQL query dynamically.
-* Get Object Records – The Get Object Records operation allows to retrieve object records detail using object metadata fields to build a VQL query dynamically and execute on vault to get Object details.
-* Get Picklists – The Get Picklists operation allows to retrieve all available picklist values configured on a picklist.
-* Query - The Query Operation allows to execute specified VQL query on Vault and retrieve result in paginated data input stream.
-* Update Documents – The Update Documents operation allows to update bulk document(s) with provided editable metadata in payload either in CSV or JSON format.
-* Update Object Records – The Update Object Records operation allows to update object records of specified vault object.
-
-See Also
-
-* https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-co[Anypoint Connector Support Policy]
-
-* https://forums.mulesoft.com/index.html[MuleSoft Forum]
-
-* https://support.mulesoft.com[Contact MuleSoft Support]
