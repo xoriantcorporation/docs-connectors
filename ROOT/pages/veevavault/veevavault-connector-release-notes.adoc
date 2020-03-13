@@ -10,6 +10,27 @@ Guide: xref:./veevavault-connector-get-started.adoc[VeevaVault Connector]
 
 Reference: xref:./veevavault-connector-reference.adoc[VeevaVault Connector Reference]
 
+*Version 1.2.0*
+
+*Release:* April 2020
+
+*Compatibility*
+
+The Veeva Vault Connector supports these software versions:
+
+*Minimum Versions:*
+
+* Anypoint Studio – 7.0.0 or higher
+* Mule Runtime – 4.1.0 or higher
+* JDK – 1.8.0 or higher
+* Veeva APIs – 18.0 or higher
+
+*Fixed in this Release:*
+
+* Export documents operation runs into infinite loop when invalid/deleted document id is passed. This has been fixed.
+* New feature OAuth2 Authentication option is added in connector configuration.
+* New feature Invoke Rest API operation added that enables to invoke Veeva Vault Rest APIs.
+
 *Version 1.1.0*
 
 *Release:* January 2020
