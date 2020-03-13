@@ -353,8 +353,7 @@ To create Mule flow, follow these instructions:
 * Drag Logger element to log information in console or log file.
 +		
 	Invoke Veeva API response :: #[payload]
-
-
++
 image:../../assets/images/veevavault/veevavault-connector-invoke-rest-api-example.png[image,width=430,height=240]
 
 == XML Code
