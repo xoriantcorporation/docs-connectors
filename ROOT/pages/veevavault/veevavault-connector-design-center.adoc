@@ -70,13 +70,24 @@ The target component enables your app to process data received from the trigger.
 
 Important fields:
 
+* Vault URL (required): The URL of the Veeva Vault instance required for connection.
+* Username (required): An username to access vault instance.
+* Password (required): The password to access vault instance.
+* Version (required): Veeva Vault API version.
+* Client Id (required): The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. 
+
 == Configure OAuth2 Connection
 
 Important fields:
 
-* Display (required): How to optimize the display: Page = Full-page authorization screen (default), Popup = Compact dialog optimized for modern web browser popup windows, and Touch = Mobile-optimized dialog designed for modern smart phones, such as Android and iPhone.
-* Consumer Key (required): The consumer key for the Salesforce connected app. See Create a Consumer Key.
-* Consumer Secret (required): The consumer secret for the connector to access Salesforce.
+* Vault URL (required): The URL of the Veeva Vault instance required for connection.
+* Version (required): Veeva Vault API version.
+* Client Id (required): The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}.
+* OIDC Profile Id: The OIDC Profile Id created on vault while configuring OAuth2.0/OIDC profile. See http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles]
+* Consumer Key (required): The consumer key for the Veeva Vault connected application registered on OAuth Service Provider.
+* Consumer Secret (required): The consumer secret for the Veeva Vault connected application registered on OAuth Service Provider.
+* Authorization URL: Authorization URL Authorize to authorize the app for a user.
+* Access Token URL: An access token url to retrieve access token for authentication.
 * Listener Config (required): Configuration for the listener, for example, HTTP_Listener_config.
 * Callback Path (required): Path for the callback, for example, /callback.
 * Authorize Path (required): Path for authorization, for example, /authorize.
