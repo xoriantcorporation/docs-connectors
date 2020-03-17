@@ -6,7 +6,7 @@ endif::[]
 
 Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Select]
 
-VeevaVault Connector v1.1.0
+VeevaVault Connector v1.2.0
 
 Guide: xref:./veevavault-connector-get-started.adoc[VeevaVault Connector]
 
@@ -16,6 +16,7 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 
 ==== VeevaVault Connector Connection Config
 
+===== 1 - Basic Connection
 
 [cols=",,,,",options="header",]
 |===
@@ -26,6 +27,25 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 |Password |String |Password used to authenticate the user | |X
 |Version |String |Veeva Vault API version |v19.1 |
 |Client Id |String |The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. E.g veeva-clinical-mulesoft-connector | |X
+|===
+
+===== 2 - OAuth2 Connection
+
+[cols=",,,,",options="header",]
+|===
+|*Name* |*Type* |*Description* |*Default Value* |*Required*
+|Vault URL |String |The URL of the Veeva Vault instance required for connection | |X
+|Version |String |Veeva Vault API version |v19.1 |
+|Client Id |String |The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. E.g veeva-clinical-mulesoft-connector | |X
+|OIDC Profile Id |String |The OIDC Profile Id created on vault while configuring OAuth2.0/OIDC profile. See http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles] | |X
+|Consumer Key |String |The consumer key for the Veeva Vault connected application registered on OAuth Service Provider. | |X
+|Consumer Secret |String |The consumer secret for the Veeva Vault connected application registered on OAuth Service Provider. | |X
+|Authorization URL |String |Authorization URL Authorize to authorize the app for a user. | |X
+|Access Token URL |String |An access token url to retrieve access token for authentication. | |X
+|Listener Config |String |Configuration for the listener, for example, HTTP_Listener_config. | |X
+|Callback Path |String |Path for the callback, for example, /callback. | |X
+|Authorize Path |String |Path for authorization, for example, /authorize. | |X
+|External Callback URL |String |Callback URL, for example, http://localhost:8085/callback. | |
 |===
 
 *Response Timeout (Advanced Tab)*
