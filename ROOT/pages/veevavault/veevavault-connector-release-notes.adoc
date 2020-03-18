@@ -35,6 +35,7 @@ April 2020
 This release contains the following fixed issues:
 
 * Export documents operation runs into infinite loop when invalid/deleted document id is passed.
+* Spark Validator operation fails to verify the spark message if the spark headers received from vault in non-alphabetical order.
 
 === *1.1.0*
 
