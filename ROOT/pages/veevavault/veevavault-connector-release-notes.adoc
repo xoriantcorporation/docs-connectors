@@ -10,7 +10,7 @@ Anypoint Connector for Veeva Vault (Veeva Vault) enables you to integrate the Ve
 
 === *1.2.0*
 
-April 2020
+May 2020
 
 === *Compatibility*
 
