@@ -34,7 +34,7 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 [cols=",,,,",options="header",]
 |===
 |*Name* |*Type* |*Description* |*Default Value* |*Required*
-|Vault OAuth Login URL |String |Vault OAuth URL require to trigger to retrieve session Id from vault. |X
+|Vault OAuth Login URL |String |Vault OAuth URL require to trigger to retrieve session Id from vault. |https://login.veevavault.com |
 |Vault URL |String |The URL of the Veeva Vault instance required for connection | |X
 |Version |String |Veeva Vault API version |v19.1 |
 |Client Id |String |The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. E.g veeva-clinical-mulesoft-connector | |X
