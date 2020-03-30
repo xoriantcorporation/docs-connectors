@@ -49,6 +49,8 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 |External Callback URL |String |Callback URL, for example, http://localhost:8085/callback. | |
 |===
 
+See https://docs.mulesoft.com/connectors/http/http-authentication#oauth2-authorization-code[OAuth 2.0 - Authorization Code Configuration] for more details.
+
 *Response Timeout (Advanced Tab)*
 
 [cols=",,,,",options="header",]
