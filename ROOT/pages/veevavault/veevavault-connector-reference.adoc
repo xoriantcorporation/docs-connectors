@@ -105,7 +105,36 @@ The following sections help you configure the Mule client app for accessing the 
 image:../../assets/images/veevavault/veevavault-connector-oauth-configuration.png[image,width=600,height=583]
 +
 . Click OK.
++
+. Drag Transform component from the Mule Palette to transform inputstream to JSON.
 
+====== Run the Mule Client App
+
+After deploying the Mule client app, you follow the procedure in this section to run the app. The procedure covers the following actions:
+* Submitting an HTTP request for Vault access to the Mule client app. For example - http://locahost:8081/authorize?resourceOwnerId=<your resource owner Id>
+  The client app redirects the request to the OKTA authentication server. OKTA prompts you to login and authorize the client app you registered.	
+* Using your OKTA login account credentials to log in and authorize the application.
+  In response, the OKTA authentication server returns an access token.
+* Requesting the secured vault picklists data using session Id retrieved using the access token.
+
+To run the Mule client app to get Vault Picklists data:
+
+Perform these steps before the access token expires:
+
+. Right-click the project name in project explorer, and choose Run as > Mule Application.
+  The console shows that the app is deployed.
++
+. In a browser, enter the local authorization URL http://localhost:8082/authorize?resourceOwnerId=<your resource owner id> to initiate the OAuth2 dance.  
+  OKTA prompts you to log in.
++
+. Log in using your OKTA user name and password. 
+  OKTA prompts you to authorize the application you registered to run. 
++
+. Click Sign In.
+  *Successfully retrieved access token* appears as body text in the browser you used to initiate the OAuth2 dance.
++
+. To retrieve Picklists data, enter the following URL in a browser:
+  http://localhost:8081/get-picklists  
 
 *Response Timeout (Advanced Tab)*
 
