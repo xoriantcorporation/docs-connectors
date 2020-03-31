@@ -49,7 +49,58 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 |External Callback URL |String |Callback URL, for example, http://localhost:8085/callback. | |
 |===
 
-See https://docs.mulesoft.com/connectors/http/http-authentication#oauth2-authorization-code[OAuth 2.0 - Authorization Code Configuration] for more details.
+===== OAuth2 - Authorization Code Configuration
+The OAuth2 - Authorization Code configures the OAuth 2.0 authorization code grant type. The OAuth authentication server holds the resources that are protected by OAuth. For example, calls to the VeevaVault Connection operation can be authenticated through OKTA server using OAuth. The example in this section shows you how to create Mule client application to access a protected resource, Retrieve docuemnts data on the VeevaVault configured with OAuth authentication server. The example covers the following things:
+
+* Set up authorization
+* Create a Mule client app
+* Run the Mule client app
+
+====== Set up authorization
+. The app uses these credentials later to identify itself to the authentication server. During the registration, you also provide the URL to the Mule app home page and the application callback URL.
++
+. https://developer.okta.com/docs/guides/implement-oauth-for-okta/create-oauth-app/[Register the application]. Provide required details while creating application.
++
+. Make sure you store Client Id and Client Secret for future use.
+
+====== Create the Mule Client App
+You can create a Mule client app that uses the OKTA assigned client ID and client secret to access vault data on the Veeva Vault instance using OAuth Authentication. The sample consists of an HTTP Listener connector, Get Picklists operation, and a DataWeave (Transform) component for transforming plain text to JSON. In the VeevaVault Connector configuration, you configure access to the authentication server.
+
+The following sections help you configure the Mule client app for accessing the OKTA authentication server.
+
+. Drag HTTP Listener operation from Mule Palette to the Process area of the Studio flow. 
++
+. In the properties editor for Connector Configuration, click the green plus icon (or click the Edit icon if you have already created a configuration). Configure HTTP Listener configuration with host (localhost) and port (8081) and provide base path listener as /oauth
++
+. Drag Get Picklists from the VeevaVault connector Palette. 
++
+. In the properties editor for Connector Configuration, click the green plus icon. In Connection drop down list select "2 - OAuth2 Connection"
++
+. In Genral tab, configure the following.
+======= Vault Configuration
+** Vault OAuth Login URL: Configure with Vault OAuth Login URL to retrieve the session Id, As per Veeva documentation https://developer.veevavault.com/api/19.1/#oauth-2-0-openid-connect[OAuth 2.0/OpenId Connect API]. Default is *https://login.veevavault.com*
+** OIDC Profile Id: Vault OIDC Profile Id created after configuring http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[OAuth2 OIDC Profile]
+** Vault URL: Veeva Vault instance URL to invoke Veeva APIs
+** Version: Vault API version to use to invoke Veeva APIs. Default is *v19.1*
+** Client Id: Client Id required to send with each request in header. 
++
+======= OAuth Authorization Configuration
+** Consumer Key: The Client Id that is created on OKTA when you registered the application.
+** Consumer Secret: The Client Secret that is created on OKTA when you registered the application.
+** Authorization URL: The endpoint to authorize an user to grant access to vault instance. You get this URL when you registered the app on OKTA.
+** Access Token URL: The endpoint to retrieve access token for an user to grant access the vault instance. You get this URL when you registered the app on OKTA.
+** Scopes: Optional, provide the Scopes if define on OKTA.
+** Resource Owner Id: The user that owns the resource (Vault instance) needs to specify the resourceOwnerId to assign to the token when the dance is initiated.
+======== OAuth Callback Configuration
+** Listener Config: The Listener that will catch access token callback endpoint. Default will pick HTTP Listener configured.
+** Callback Path: The path of access token endpoint. Define as */callback*
+** Authorize Path: The path of local endpoint which trigger the OAuth dance. Define as */authorize*
+** External Callback URL: The OAuth authentication server uses this URL to provide the authentication code to the Mule server so that the Mule server can retrieve the access token. This must be the externally visible address of the callback, not the local one. Define as *http://localhost:8081/callback*
++
+image:../../assets/images/veevavault/veevavault-connector-oauth-configuration.png[image,width=600,height=583]
++
+. Click OK.
+
 
 *Response Timeout (Advanced Tab)*
 
