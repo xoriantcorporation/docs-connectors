@@ -72,12 +72,14 @@ The following sections help you configure the Mule client app for accessing the 
 +
 . In the properties editor for Connector Configuration, click the green plus icon (or click the Edit icon if you have already created a configuration). Configure HTTP Listener configuration with host (localhost) and port (8081) and provide base path listener as /oauth
 +
-. Drag Get Picklists from the VeevaVault connector Palette. 
+. Drag Get Picklists operation from the VeevaVault connector Palette. 
 +
 . In the properties editor for Connector Configuration, click the green plus icon. In Connection drop down list select "2 - OAuth2 Connection"
 +
 . In Genral tab, configure the following.
++
 ======= Vault Configuration
++
 ** Vault OAuth Login URL: Configure with Vault OAuth Login URL to retrieve the session Id, As per Veeva documentation https://developer.veevavault.com/api/19.1/#oauth-2-0-openid-connect[OAuth 2.0/OpenId Connect API]. Default is *https://login.veevavault.com*
 ** OIDC Profile Id: Vault OIDC Profile Id created after configuring http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[OAuth2 OIDC Profile]
 ** Vault URL: Veeva Vault instance URL to invoke Veeva APIs
@@ -85,13 +87,16 @@ The following sections help you configure the Mule client app for accessing the 
 ** Client Id: Client Id required to send with each request in header. 
 +
 ======= OAuth Authorization Configuration
++
 ** Consumer Key: The Client Id that is created on OKTA when you registered the application.
 ** Consumer Secret: The Client Secret that is created on OKTA when you registered the application.
 ** Authorization URL: The endpoint to authorize an user to grant access to vault instance. You get this URL when you registered the app on OKTA.
 ** Access Token URL: The endpoint to retrieve access token for an user to grant access the vault instance. You get this URL when you registered the app on OKTA.
 ** Scopes: Optional, provide the Scopes if define on OKTA.
 ** Resource Owner Id: The user that owns the resource (Vault instance) needs to specify the resourceOwnerId to assign to the token when the dance is initiated.
++
 ======== OAuth Callback Configuration
++
 ** Listener Config: The Listener that will catch access token callback endpoint. Default will pick HTTP Listener configured.
 ** Callback Path: The path of access token endpoint. Define as */callback*
 ** Authorize Path: The path of local endpoint which trigger the OAuth dance. Define as */authorize*
