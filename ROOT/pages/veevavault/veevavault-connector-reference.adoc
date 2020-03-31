@@ -78,7 +78,7 @@ The following sections help you configure the Mule client app for accessing the 
 +
 . In Genral tab, configure the following.
 +
-======= Vault Configuration
+* *Vault Configuration*
 +
 ** Vault OAuth Login URL: Configure with Vault OAuth Login URL to retrieve the session Id, As per Veeva documentation https://developer.veevavault.com/api/19.1/#oauth-2-0-openid-connect[OAuth 2.0/OpenId Connect API]. Default is *https://login.veevavault.com*
 ** OIDC Profile Id: Vault OIDC Profile Id created after configuring http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[OAuth2 OIDC Profile]
@@ -86,7 +86,7 @@ The following sections help you configure the Mule client app for accessing the 
 ** Version: Vault API version to use to invoke Veeva APIs. Default is *v19.1*
 ** Client Id: Client Id required to send with each request in header. 
 +
-======= OAuth Authorization Configuration
+* *OAuth Authorization Configuration*
 +
 ** Consumer Key: The Client Id that is created on OKTA when you registered the application.
 ** Consumer Secret: The Client Secret that is created on OKTA when you registered the application.
@@ -95,7 +95,7 @@ The following sections help you configure the Mule client app for accessing the 
 ** Scopes: Optional, provide the Scopes if define on OKTA.
 ** Resource Owner Id: The user that owns the resource (Vault instance) needs to specify the resourceOwnerId to assign to the token when the dance is initiated.
 +
-======== OAuth Callback Configuration
+* *OAuth Callback Configuration*
 +
 ** Listener Config: The Listener that will catch access token callback endpoint. Default will pick HTTP Listener configured.
 ** Callback Path: The path of access token endpoint. Define as */callback*
