@@ -311,6 +311,7 @@ To create Mule flow, follow these instructions:
 * Configure Veeva Vault connection configuration with username, password, vault Url, vault version, vault client Id.
 * Configure the following parameters
 +
+----
 	Method: POST,
 	Path: "/objects/documents", 
 	Headers: 
@@ -320,6 +321,7 @@ To create Mule flow, follow these instructions:
 		Value: "multipart/form-data; boundary=abcdefg"
 	URI Parameters: Leave it empty.
 	Query Parameters: Leave it empty.
+----	
 +	
 ----
 Body:
