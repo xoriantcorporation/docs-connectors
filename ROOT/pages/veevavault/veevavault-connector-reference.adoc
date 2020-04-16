@@ -16,7 +16,7 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 
 ==== VeevaVault Connector Connection Config
 
-===== 1 - Basic Connection
+===== Basic Connection
 
 [cols=",,,,",options="header",]
 |===
@@ -29,112 +29,6 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 |Client Id |String |The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. E.g veeva-clinical-mulesoft-connector | |X
 |===
 
-===== 2 - OAuth2 Connection
-
-[cols=",,,,",options="header",]
-|===
-|*Name* |*Type* |*Description* |*Default Value* |*Required*
-|Vault OAuth Login URL |String |Vault OAuth URL require to trigger to retrieve session Id from vault. |https://login.veevavault.com |
-|Vault URL |String |The URL of the Veeva Vault instance required for connection | |X
-|Version |String |Veeva Vault API version |v19.1 |
-|Client Id |String |The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. E.g veeva-clinical-mulesoft-connector | |X
-|OIDC Profile Id |String |The OIDC Profile Id created on vault while configuring OAuth2.0/OIDC profile. See http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles] | |X
-|Consumer Key |String |The consumer key for the Veeva Vault connected application registered on OAuth Service Provider. | |X
-|Consumer Secret |String |The consumer secret for the Veeva Vault connected application registered on OAuth Service Provider. | |X
-|Authorization URL |String |Authorization URL Authorize to authorize the app for a user. | |X
-|Access Token URL |String |An access token url to retrieve access token for authentication. | |X
-|Listener Config |String |Configuration for the listener, for example, HTTP_Listener_config. | |X
-|Callback Path |String |Path for the callback, for example, /callback. | |X
-|Authorize Path |String |Path for authorization, for example, /authorize. | |X
-|External Callback URL |String |Callback URL, for example, http://localhost:8085/callback. | |
-|===
-
-===== OAuth2 - Authorization Code Configuration
-The OAuth2 - Authorization Code configures the OAuth 2.0 authorization code grant type. The OAuth authentication server holds the resources that are protected by OAuth. For example, calls to the VeevaVault Connection operation can be authenticated through OKTA server using OAuth. The example in this section shows you how to create Mule client application to access a protected resource, Retrieve docuemnts data on the VeevaVault configured with OAuth authentication server. The example covers the following things:
-
-* Set up authorization
-* Create a Mule client app
-* Run the Mule client app
-
-====== Set up authorization
-. The app uses these credentials later to identify itself to the authentication server. During the registration, you also provide the URL to the Mule app home page and the application callback URL.
-+
-. https://developer.okta.com/docs/guides/implement-oauth-for-okta/create-oauth-app/[Register the application]. Provide required details while creating application.
-+
-. Make sure you store Client Id and Client Secret for future use.
-
-====== Create the Mule Client App
-You can create a Mule client app that uses the OKTA assigned client ID and client secret to access vault data on the Veeva Vault instance using OAuth Authentication. The sample consists of an HTTP Listener connector, Get Picklists operation, and a DataWeave (Transform) component for transforming plain text to JSON. In the VeevaVault Connector configuration, you configure access to the authentication server.
-
-The following sections help you configure the Mule client app for accessing the OKTA authentication server.
-
-. Drag HTTP Listener operation from Mule Palette to the Process area of the Studio flow. 
-+
-. In the properties editor for Connector Configuration, click the green plus icon (or click the Edit icon if you have already created a configuration). Configure HTTP Listener configuration with host (localhost) and port (8081) and provide base path listener as /oauth
-+
-. Drag Get Picklists operation from the VeevaVault connector Palette. 
-+
-. In the properties editor for Connector Configuration, click the green plus icon. In Connection drop down list select "2 - OAuth2 Connection"
-+
-. In Genral tab, configure the following.
-+
-* *Vault Configuration*
-+
-** Vault OAuth Login URL: Configure with Vault OAuth Login URL to retrieve the session Id, As per Veeva documentation https://developer.veevavault.com/api/19.1/#oauth-2-0-openid-connect[OAuth 2.0/OpenId Connect API]. Default is *https://login.veevavault.com*
-** OIDC Profile Id: Vault OIDC Profile Id created after configuring http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[OAuth2 OIDC Profile]
-** Vault URL: Veeva Vault instance URL to invoke Veeva APIs
-** Version: Vault API version to use to invoke Veeva APIs. Default is *v19.1*
-** Client Id: Client Id required to send with each request in header. 
-+
-* *OAuth Authorization Configuration*
-+
-** Consumer Key: The Client Id that is created on OKTA when you registered the application.
-** Consumer Secret: The Client Secret that is created on OKTA when you registered the application.
-** Authorization URL: The endpoint to authorize an user to grant access to vault instance. You get this URL when you registered the app on OKTA.
-** Access Token URL: The endpoint to retrieve access token for an user to grant access the vault instance. You get this URL when you registered the app on OKTA.
-** Scopes: Optional, provide the Scopes if define on OKTA.
-** Resource Owner Id: The user that owns the resource (Vault instance) needs to specify the resourceOwnerId to assign to the token when the dance is initiated.
-+
-* *OAuth Callback Configuration*
-+
-** Listener Config: The Listener that will catch access token callback endpoint. Default will pick HTTP Listener configured.
-** Callback Path: The path of access token endpoint. Define as */callback*
-** Authorize Path: The path of local endpoint which trigger the OAuth dance. Define as */authorize*
-** External Callback URL: The OAuth authentication server uses this URL to provide the authentication code to the Mule server so that the Mule server can retrieve the access token. This must be the externally visible address of the callback, not the local one. Define as *http://localhost:8081/callback*
-+
-image:../../assets/images/veevavault/veevavault-connector-oauth-configuration.png[image,width=600,height=583]
-+
-. Click OK.
-+
-. Drag Transform component from the Mule Palette to transform inputstream to JSON.
-
-====== Run the Mule Client App
-
-After deploying the Mule client app, you follow the procedure in this section to run the app. The procedure covers the following actions:
-* Submitting an HTTP request for Vault access to the Mule client app. For example - http://locahost:8081/authorize?resourceOwnerId=<your resource owner Id>
-  The client app redirects the request to the OKTA authentication server. OKTA prompts you to login and authorize the client app you registered.	
-* Using your OKTA login account credentials to log in and authorize the application.
-  In response, the OKTA authentication server returns an access token.
-* Requesting the secured vault picklists data using session Id retrieved using the access token.
-
-To run the Mule client app to get Vault Picklists data:
-
-Perform these steps before the access token expires:
-
-. Right-click the project name in project explorer, and choose Run as > Mule Application.
-  The console shows that the app is deployed.
-+
-. In a browser, enter the local authorization URL http://localhost:8082/authorize?resourceOwnerId=<your resource owner id> to initiate the OAuth2 dance.  
-  OKTA prompts you to log in.
-+
-. Log in using your OKTA user name and password. 
-  OKTA prompts you to authorize the application you registered to run. 
-+
-. Click Sign In.
-  *Successfully retrieved access token* appears as body text in the browser you used to initiate the OAuth2 dance.
-+
-. To retrieve Picklists data, enter the following URL in a browser:
-  http://localhost:8081/get-picklists  
 
 *Response Timeout (Advanced Tab)*
 

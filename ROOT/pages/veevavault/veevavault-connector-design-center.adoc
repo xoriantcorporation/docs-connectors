@@ -33,7 +33,6 @@ Flow Designer automatically saves all changes.
 |===
 |*Connection Type* |*Veeva Vault Information Site*
 |link:#configure-basic-username-password-connection[*Basic Connection*] |http://vaulthelp2.vod309.com/wordpress/admin-user-help/users/creating-and-managing-users/[Creating and Managing Users]
-|link:#configure-oauth2-connection[*OAuth2 Connection*] |http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles]
 |===
 
 == Configure the Target Component
@@ -48,8 +47,6 @@ The target component enables your app to process data received from the trigger.
 . Select Click here to set it up to set up other required fields.
 . Enter Configuration Name.
 . Click Add Connection and enter connection name.
-. In Connection Type, Select "*1 - Basic Connection*" or "*2 - OAuth2 Connection*".
-. Following is a configuration for *"1 - Basic Connection"*. See link:veevavault-connector-reference.adoc#veevavault-connector-connection-config[Connector Configuration] for "*2 - OAuth2 Connection*" configuration.
 . In General tab, enter below required fields:
 +
 [cols=",,",options="header",]
@@ -63,7 +60,7 @@ The target component enables your app to process data received from the trigger.
 |*Client Id* |Enter Client Id in format *\{organisation}-{company\|team}* (for example: *"abcpharma-clinicalprod"*) to send with each request in header for tracking purpose. Before sending, the Client Id is prefix with *"mulesoft"* and suffix with *"client-vaultconnector"* internally as shown in e.g:   *mulesoft-abcpharma-clinicalprod-client-vaultconnector*. |Yes
 |===
 +
-. In Advanced tab, Select Burst API Limit Config and Daily API Limit Config.
+. In Advanced tab, Select *Burst API Limit Config* and *Daily API Limit Config*.
 . Click the *Test* button to test the connection.
 
 == Configure Basic Username Password Connection`
@@ -76,22 +73,6 @@ Important fields:
 * Version (required): Veeva Vault API version.
 * Client Id (required): The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. 
 
-== Configure OAuth2 Connection
-
-Important fields:
-
-* Vault URL (required): The URL of the Veeva Vault instance required for connection.
-* Version (required): Veeva Vault API version.
-* Client Id (required): The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}.
-* OIDC Profile Id (required): The OIDC Profile Id created on vault while configuring OAuth2.0/OIDC profile. See http://vaulthelp2.vod309.com/wordpress/admin-user-help/authentication-vault-security/configuring-oauth-2-oidc-profiles/[Configuring OAuth 2.0 / OpenID Connect Profiles]
-* Consumer Key (required): The consumer key for the Veeva Vault connected application registered on OAuth Service Provider.
-* Consumer Secret (required): The consumer secret for the Veeva Vault connected application registered on OAuth Service Provider.
-* Authorization URL (required): Authorization URL Authorize to authorize the app for a user.
-* Access Token URL (required): An access token url to retrieve access token for authentication.
-* Listener Config (required): Configuration for the listener, for example, HTTP_Listener_config.
-* Callback Path (required): Path for the callback, for example, /callback.
-* Authorize Path (required): Path for authorization, for example, /authorize.
-* External Callback URL: Callback URL, for example, http://localhost:8085/callback.
 
 == See Also
 
