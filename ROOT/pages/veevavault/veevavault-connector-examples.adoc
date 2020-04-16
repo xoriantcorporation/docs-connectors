@@ -321,8 +321,9 @@ To create Mule flow, follow these instructions:
 	URI Parameters: Leave it empty.
 	Query Parameters: Leave it empty.
 +	
-	Body:
 ----
+	Body:
+
 	%dw 2.0
 	output multipart/form-data boundary='abcdefg'
 	---
@@ -340,43 +341,43 @@ To create Mule flow, follow these instructions:
 			},
 			name__v: {
 				headers: {
-+					
+					
 				},
 				content: 'Test Document'
 			},
 			type__v: {
 				headers: {
-+				
+				
 				},
 				content: 'Trial Management'
 			},
 			subtype__v: {
 				headers: {
-+
+
 				},
 				content: 'Meetings'
 			},
 			classification__v: {
 				headers: {
-+
+
 				},
 				content: 'Kick-off Meeting Material'
 			},
 			lifecycle__v: {
 				headers: {
-+					
+					
 				},
 				content: 'Base Doc Lifecycle'
 			},
 			study__v: {
 				headers: {
-+					
+					
 				},
 				content: '0ST000000000301'
 			},	
 			comments__c: {
 				headers: {
-+					
+					
 				},
 				content: 'Test Document'
 			}						
