@@ -312,15 +312,15 @@ To create Mule flow, follow these instructions:
 * Configure the following parameters
 +
 ----
-	Method: POST,
-	Path: "/objects/documents", 
-	Headers: 
-		Key: "Accept"
-		Value: "application/json"
-		Key: "Content-Type"
-		Value: "multipart/form-data; boundary=abcdefg"
-	URI Parameters: Leave it empty.
-	Query Parameters: Leave it empty.
+Method: POST,
+Path: "/objects/documents", 
+Headers: 
+	Key: "Accept"
+	Value: "application/json"
+	Key: "Content-Type"
+	Value: "multipart/form-data; boundary=abcdefg"
+URI Parameters: Leave it empty.
+Query Parameters: Leave it empty.
 ----	
 +	
 ----
@@ -387,31 +387,37 @@ output multipart/form-data boundary='abcdefg'
 }
 ----	
 +
-	Similarly, you can configure for PUT request for example:
+----
+Similarly, you can configure for PUT request for example:
+----	
++
+----	
+Method: PUT,
+Path: "/objects/documents/{doc_id}", 
+Headers: 
+	Key: "Accept"
+	Value: "application/json"
+	Key: "Content-Type"
+	Value: "application/x-www-form-urlencoded"
+URI Parameters:
+	Key: "doc_id"
+	Value: "259592"
+Query Parameters: Leave it empty.
+----
 +	
-	Method: PUT,
-	Path: "/objects/documents/{doc_id}", 
-	Headers: 
-		Key: "Accept"
-		Value: "application/json"
-		Key: "Content-Type"
-		Value: "application/x-www-form-urlencoded"
-	URI Parameters:
-		Key: "doc_id"
-		Value: "259592"
-	Query Parameters: Leave it empty.
-+	
-	Body:
-	%dw 2.0
-	output application/x-www-form-urlencoded
-	---
-	{
-		"id": "259592",
-		"name__v": "Kick-off Meeting Material Updated",
-		"product__v": "00P000000000403",
-		"study__v": "0ST000000000202",
-		"notes__v": "Notes Updated"		
-	}	
+----
+Body:
+%dw 2.0
+output application/x-www-form-urlencoded
+---
+{
+	"id": "259592",
+	"name__v": "Kick-off Meeting Material Updated",
+	"product__v": "00P000000000403",
+	"study__v": "0ST000000000202",
+	"notes__v": "Notes Updated"		
+}
+----	
 +
 	Note: You can configure above parameters as per your requirement to invoke Vault REST API.
 +	
