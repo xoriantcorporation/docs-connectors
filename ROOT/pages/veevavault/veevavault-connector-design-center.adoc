@@ -71,7 +71,7 @@ Important fields:
 * Username (required): An username to access vault instance.
 * Password (required): The password to access vault instance.
 * Version (required): Veeva Vault API version.
-* Client Id (required): The Client Id that needs to be sent with each request header to the Vault instance in format - \{organisation\}-\{component/team\}. 
+* Client Id (required): The Client Id that needs to be sent with each request header to the Vault instance in format - \{organisation}-{component/team}. 
 
 
 == See Also
