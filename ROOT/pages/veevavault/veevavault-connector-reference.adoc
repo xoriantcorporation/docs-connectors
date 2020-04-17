@@ -26,7 +26,7 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 |Username |String |Username used to initialize the session | |X
 |Password |String |Password used to authenticate the user | |X
 |Version |String |Veeva Vault API version |v20.1 |
-|Client Id |String |The Client Id in format \{organization}-{component/team} (for example: "abcpharma-clinicalprod") to send with each request in header for tracking purpose. Before sending, the Client Id is prefix with "mulesoft" and suffix with "client-vaultconnector" internally as shown in e.g: mulesoft-abcpharma-clinicalprod-client-vaultconnector." | |X
+|Client Id |String |The Client Id in format *\{organization}-{component/team}* (for example: "*abcpharma-clinicalprod*") to send with each request in header for tracking purpose. Before sending, the Client Id is prefix with "*mulesoft*" and suffix with "*client-vaultconnector*" internally as shown in e.g: "*mulesoft-abcpharma-clinicalprod-client-vaultconnector*." | |X
 |===
 
 
