@@ -9,7 +9,7 @@ The example project we provide can be a starting point for your MuleSoft project
 
 == Example : Create Documents on Vault with metadata fetched from database.
 
-This example create documents in bulk with document metadata received from external source (database). Before documents created on vault the document files are uploaded on Vault FTP server. The documents created status is inserted into – Database. However, you can trigger to external source etc.
+This example creates documents in bulk using document metadata received from an external source (database). Before documents are created in the vault, the document files are uploaded onto the Vault FTP staging server. In this example the documents created status is inserted into the Database, however, you can also trigger it to be sent to different external sources, etc.
 
 To create Mule flow, follow these instructions:
 
@@ -244,7 +244,7 @@ To create Mule flow, follow these instructions:
 	
 	b.  This will create spark-listener.jks file at current directory.
 	
-	c.  Copy/Import spark-listener.jks file under project directory (src/main/resources).
+	c.  Copy/import spark-listener.jks file under project directory (src/main/resources).
 * Configure HTTPS Listener as below.
 
 	a.	General Tab:
@@ -309,7 +309,7 @@ To create Mule flow, follow these instructions:
 * Drag Read operation from File Connector palette and configure file path to read a file content to associate with vault document.
 * Drag Invoke Rest API operation from Veeva Vault Connector palette.
 * Configure Veeva Vault connection configuration with username, password, vault Url, vault version, vault client Id.
-* Configure the following parameters
+* Configure the following parameters:
 +
 ----
 Method: POST,
