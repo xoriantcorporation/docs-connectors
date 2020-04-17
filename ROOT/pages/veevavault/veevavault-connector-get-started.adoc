@@ -21,7 +21,7 @@ The Veeva Vault Connector can be use in the Mule application as an outbound conn
 * Audit Trail: Retrieve.
 * Query: VQL Query to query on Documents, Vault Object, Workflows.
 * Spark Validator: Validates and verifies the Spark message triggered from Vault with signature.
-* Invoke Rest API: Operation to invoke https://developer.veevavault.com/api/20.1/#documents[Veeva Vault Rest APIs.], where a specific connector operation doesn't already exist. It's important to use bulk Rest APIs whenever possible, rather than single APIs so as to maintain API rate limits.
+* Invoke Rest API: Operation to invoke https://developer.veevavault.com/api/20.1/#documents[Veeva Vault Rest APIs], where a specific connector operation doesn't already exist. It's important to use bulk Rest APIs whenever possible, rather than single APIs so as to maintain API rate limits.
 
 You can configure the Veeva Vault Connector using Basic Authentication configuration with credentials to connect to a Veeva Vault instance and perform operations.
 
