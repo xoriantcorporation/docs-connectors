@@ -25,8 +25,8 @@ Release Notes: xref:./veevavault-connector-release-notes.adoc[VeevaVault Connect
 |Vault URL |String |The URL of the Veeva Vault instance required for connection | |X
 |Username |String |Username used to initialize the session | |X
 |Password |String |Password used to authenticate the user | |X
-|Version |String |Veeva Vault API version |v19.3 |
-|Client Id |String |The Client Id that need to send with each request header to Vault instance in format - \{company}-\{organization}-\{server}-\{component}. E.g veeva-clinical-mulesoft-connector | |X
+|Version |String |Veeva Vault API version |v20.1 |
+|Client Id |String |The Client Id in format \{organization}-{component/team} (for example: "abcpharma-clinicalprod") to send with each request in header for tracking purpose. Before sending, the Client Id is prefix with "mulesoft" and suffix with "client-vaultconnector" internally as shown in e.g: mulesoft-abcpharma-clinicalprod-client-vaultconnector." | |X
 |===
 
 
@@ -708,7 +708,7 @@ A Query to execute specified VQL query on Vault and retrieve result in paginatio
 |===
 |*Name* |*Type* |*Description* |*Default Value* |*Required*
 |VQL Query |String a|
-A VQL Query to be define as per Veeva VQL specification to be executed. Refer https://developer.veevavault.com/api/19.1/#vault-query-language-vql[VQL Query documentation] for more details. E.g:
+A VQL Query to be define as per Veeva VQL specification to be executed. Refer https://developer.veevavault.com/api/20.1/#vault-query-language-vql[VQL Query documentation] for more details. E.g:
 
 *SELECT id, name__v, study__v FROM :table*
 
