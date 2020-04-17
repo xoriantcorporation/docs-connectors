@@ -623,8 +623,6 @@ link:#veevavault-connector-connection-config[Connection Configuration]
 
 ==== Invoke REST API
 
-invokes https://developer.veevavault.com/api/20.1/#documents[Veeva Vault Rest APIs.], where a specific connector operation doesn't already exist. It's important to use bulk Rest APIs whenever possible, rather than single APIs so as to maintain https://developer.veevavault.com/docs/#api-rate-limits[API rate limits.]
-
 Invoke REST API operation invokes https://developer.veevavault.com/api/20.1/#documents[Veeva Vault Rest APIs.] and returns response in JSON or XML format depending on header *Accept* value provided. Default response is in JSON. It's important to use bulk Rest APIs whenever possible, rather than single APIs so as to maintain https://developer.veevavault.com/docs/#api-rate-limits[API rate limits.]
 
 *<veevavault:invoke-rest-api>*
