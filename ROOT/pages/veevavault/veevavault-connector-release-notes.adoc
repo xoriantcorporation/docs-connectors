@@ -6,7 +6,35 @@ endif::[]
 
 Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Select]
 
-Anypoint Connector for Veeva Vault (Veeva Vault) enables you to integrate the Veeva Vault platform with third party vendors using connector operations in a Mule flow. The connector performs CRUD (Create, Retrieve, Update, Delete), Query, and Export operations on the vault using Veeva Vault APIs.
+Anypoint Connector for Veeva Vault (Veeva Vault) enables you to integrate the Veeva Vault platform with third party vendors using connector operations in a Mule flow. The connector performs CRUD (Create, Retrieve, Update, Delete), Query, Export, Spark Validator, Invoke REST API operations on the vault using Veeva Vault APIs.
+
+=== *1.3.0*
+
+Jan 2021
+
+=== *Compatibility*
+
+[cols=",",options="header",]
+|===
+|*App/Service* |*Version*
+|Mule |4.1 and later
+|Anypoint Studio |7.0 and later
+|JDK |1.8 and later 
+|Veeva Vault APIs |18.0 and later 
+|Apache Common Language |2.6 and later 
+|JSON libraries |20170516 and later 
+|===
+
+==== *New Features*
+
+* Connector to allow dynamic connection configurations. 
+
+==== *Fixed Issues*
+
+This release contains the following fixed issues:
+
+* Invoke REST API operation was not supporting attachment response.
+* Invoke REST API operation fails to resolve multiple URI parameters defined in path at a runtime.
 
 === *1.2.0*
 
